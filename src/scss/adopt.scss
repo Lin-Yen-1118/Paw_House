@@ -1,0 +1,277 @@
+/* div.bg {
+  width: 100%;
+  position: relative;
+} */
+div.breadcrumb {
+  /* border: 1px solid red; */
+  display: inline-block;
+  margin-top: 100px;
+  width: 300px;
+}
+div.breadcrumb > a > p {
+  display: inline-block;
+}
+div.breadcrumb > a :after {
+  content: ">";
+}
+div.breadcrumb > a :after:last-child {
+  content: "111";
+  /* border: 1px solid blue; */
+}
+
+/* 前導文字 */
+div.lead_text {
+  text-align: center;
+  /* border: 1px solid yellow; */
+  margin: 150px 0px 56px 0px;
+}
+
+div.adopt {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+}
+/* div.adopt > div.adoptBox {
+  border: 1px solid rgb(91, 16, 221);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 50px;
+} */
+div.adopt > div.adoptBox {
+  display:flex;
+  flex-wrap: wrap;
+  /* display: grid; */
+  /* grid-template-columns: auto, auto, auto; */
+  /* grid-template-columns: 300px 300px 300px; */
+  grid-template-columns: 35% auto 35%;
+  grid-template-rows: 500px 500px 500px 500px;
+  grid-auto-flow: row;
+  gap: 15px 15px;
+  /* border: 1px solid blue; */
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 1000px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  div.adopt > div.adoptBox {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 500px 500px 500px 500px 500px 500px;
+    gap: 10px 10px;
+    /* border: 1px solid blue; */
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  div.adopt > div.adoptBox {
+    grid-template-columns: 700px;
+    grid-template-rows: 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px;
+    gap: 10px 10px;
+    grid-auto-flow: column;
+    /* border: 1px solid blue; */
+  }
+}
+@media screen and (max-width: 575px) {
+  div.adopt > div.adoptBox {
+    grid-template-columns: 700px;
+    grid-template-rows: 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px;
+    gap: 10px 10px;
+    grid-auto-flow: column;
+    /* border: 1px solid blue; */
+  }
+}
+
+div.adopt > div.adoptBox > div.adoptBoxContent > a > img.grid_item_animal {
+  /* border: 1px solid yellow; */
+}
+/* 照片與描述文字的外邊框 */
+div.adopt > div.adoptBox > div.adoptBoxContent {
+  border: 1px solid #928f8f;
+
+  border-radius: 10px;
+  
+  /* padding: 5px; */
+}
+/* @media screen and (min-width: 768px) and (max-width: 992px) {
+  div.adopt > div.adoptBox > div.adoptBoxContent {
+    border: 1px solid rgb(9, 226, 194);
+  }
+} */
+/* 照片留空間，不貼邊 */
+div.adopt > div.adoptBox > div.adoptBoxContent > a > img {
+  margin: 10px;
+}
+div.adopt > div.adoptBox > div.adoptBoxContent > div.picContent {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  height:auto;
+  /* border: 1px solid blue; */
+}
+/* 待認養動物描述文字區塊 */
+div.adopt > div.adoptBox > div.adoptBoxContent > div.picContent > div {
+  text-align: start;
+  padding: 5px;
+  max-width: 90%;
+  max-height: 500px;
+  line-height: 30px;
+  /* word-break: break-all; */
+  /* position: relative; */
+}
+/* 我要預約按鈕樣式設定 */
+div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn {
+  /* border: 1px solid blue; */
+  display: block;
+  /* position: absolute; */
+  bottom: 10px;
+  left: 15%;
+  padding:12px;
+}
+div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > input {
+  /* background-color: #a63316; */
+  background-color:#ea5d39;
+  color: #ffffff;
+  border-radius: 25px;
+  width: 200px;
+  height: 40px;
+  border:1px solid transparent;
+}
+div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > input:hover {
+  background-color: #cf330c;
+  color: #ffffff;
+}
+/* div.adopt > div.adoptBox > div.adoptBoxContent > p {
+  border: 1px solid red;
+  display: none;
+  overflow: hidden;
+}
+div.adopt > div.adoptBox > div.adoptBoxContent > a > img:checked ~ p {
+  display: block;
+  overflow: visible;
+} */
+/* 分頁 */
+div.adopt_pagination_box {
+  display: flex;
+  margin: 50px auto;
+
+  /* border: 1px solid red; */
+}
+div.adopt_pagination_box > ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0 auto;
+}
+div.adopt_pagination_box > ul.pagination > li {
+  display: inline;
+}
+div.adopt_pagination_box > ul.pagination > li > a {
+  border: 1px solid #9e9a9a;
+  border-radius: 15px;
+  color: rgb(50, 50, 51);
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 28px;
+  transition: background-color 0.3s;
+  margin: 0 3px;
+}
+div.adopt_pagination_box > ul.pagination > li > a.active {
+  background-color: rgb(230, 178, 111);
+  color: #ffffff;
+  border-radius: 15px;
+}
+div.adopt_pagination_box > ul.pagination > li > a:hover:not(.active) {
+  background-color: rgb(230, 178, 113);
+}
+
+/* 加入分頁選擇器 */
+#adoptDogPage1:target,
+#adoptDogPage2:target,
+#adoptDogPage3:target {
+  border: solid 1px red;
+}
+#adoptCatPage1:target,
+#adoptCatPage2:target,
+#adoptCatPage3:target {
+  border: solid 1px red;
+}
+#adoptRabbitPage1:target,
+#adoptRabbitPage2:target,
+#adoptRabbitPage3:target {
+  border: solid 1px red;
+}
+#adoptGuineapigPage1:target,
+#adoptGuineapigPage2:target,
+#adoptGuineapigPage3:target {
+  border: solid 1px red;
+}
+#adoptHamsterPage1:target,
+#adoptHamsterPage2:target,
+#adoptHamsterPage3:target {
+  border: solid 1px red;
+}
+
+/* 認養鼠鼠內在區分兩種分頁:天竺鼠、倉鼠 */
+#adoptRodentPage1:target,
+#adoptRodentPage2:target {
+  border: solid 1px red;
+}
+
+/* 天竺鼠跟倉鼠的的分頁選擇器 */
+div.adopt_pagination_box_selecter {
+  /* border: 1px solid red; */
+  display: flex;
+  margin: 0 auto;
+}
+div.adopt_pagination_box_selecter > ul.pagination_selecter {
+  /* border: 1px solid blue; */
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  color: #575554;
+}
+div.adopt_pagination_box_selecter > ul.pagination_selecter > li {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 0px 10px;
+}
+div.adopt_pagination_box_selecter > ul.pagination_selecter > li > a.active {
+  /* border: 1px solid rgb(231, 10, 183); */
+  background-color: rgb(230, 178, 111);
+  border-radius: 20px;
+  border: 1.5px solid #c4c4c4;
+}
+div.adopt_pagination_box_selecter
+  > ul.pagination_selecter
+  > li
+  > a:not(active) {
+  /* border: 1px solid rgb(231, 10, 183); */
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: 1.5px solid #c4c4c4;
+}
+
+div.adopt_pagination_box_selecter > ul.pagination_selecter > li > a:hover {
+  border: 1px solid #858080;
+}
+
+div.adopt_pagination_box_selecter > ul.pagination_selecter > li > a > p {
+  color: #575554;
+  /* border: 1px solid purple; */
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px;
+  margin: 0px 10px;
+}
+
+

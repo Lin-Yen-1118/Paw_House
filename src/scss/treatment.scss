@@ -1,0 +1,15 @@
+div.wapper{
+    display:grid;
+    grid-template-columns: 150px;
+    grid-template-areas:200px;
+    grid-auto-flow: row;
+    grid-gap: 20px;
+    width: 220px;
+   min-height: 100vh;
+   margin: 0 auto;
+   
+}
+/* .wapper > div >img{
+    width: 200px;
+    height: 200px;
+} */
