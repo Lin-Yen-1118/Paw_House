@@ -25,36 +25,36 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "backend" */ "../views/adopt_main.vue"),
   },
-  // {
-  //   path: "/room",
-  //   name: "room",
-  //   component: () =>
-  //     import(/* webpackChunkName: "backend" */ "../views/room.vue"),
-  // },
-  // {
-  //   path: "/pet_accommodation",
-  //   name: "pet_accommodation",
-  //   component: () =>
-  //     import(/* webpackChunkName: "backend" */ "../views/pet_accommodation.vue"),
-  // },
-  // {
-  //   path: "/cart",
-  //   name: "cart",
-  //   component: () =>
-  //     import(/* webpackChunkName: "backend" */ "../views/cart.vue"),
-  // },
-  // {
-  //   path: "/user",
-  //   name: "user",
-  //   component: () =>
-  //     import(/* webpackChunkName: "backend" */ "../views/user.vue"),
-  // },
-  // {
-  //   path: "/product",
-  //   name: "product",
-  //   component: () =>
-  //     import(/* webpackChunkName: "backend" */ "../views/product.vue"),
-  // },
+  {
+    path: "/room",
+    name: "room",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/room.vue"),
+  },
+  {
+    path: "/pet_accommodation",
+    name: "pet_accommodation",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/pet_accommodation.vue"),
+  },
+  {
+    path: "/cart",
+    name: "cart",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/cart.vue"),
+  },
+  {
+    path: "/user",
+    name: "user",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/user.vue"),
+  },
+  {
+    path: "/product",
+    name: "product",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/product.vue"),
+  },
 
 ];
 

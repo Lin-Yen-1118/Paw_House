@@ -28,8 +28,10 @@
     </div>
 </template>
 <script>
-export default {}
+export default {
+    name: 'aboutUs',
+}
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/scss/about_me.scss';
 </style>

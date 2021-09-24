@@ -176,3 +176,11 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    name: 'room',
+}
+</script>
+<style lang="scss" scoped>
+@import '@/scss/bookingroom_peopleroom.scss';
+</style>

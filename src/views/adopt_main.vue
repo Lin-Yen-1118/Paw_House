@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="adopt">
         <!-- 認養須知 -->
         <div class="adopt_pics">
             <!-- <img id="adopt" src="./img/adopt/animals.jpg"> -->
@@ -341,3 +341,11 @@
     </div> -->
     </div>
 </template>
+<script>
+export default {
+    name: 'adopt_main',
+}
+</script>
+<style lang="scss" scoped>
+@import '@/scss/adopt_main.scss';
+</style>

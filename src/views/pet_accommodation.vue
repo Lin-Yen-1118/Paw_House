@@ -84,3 +84,13 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    name: 'pet_accommodation',
+}
+</script>
+<style lang="scss" scoped>
+@import '@/scss/room_pet.scss';
+@import '@/scss/bookingroom.scss';
+@import '@/scss/bookingroom_peopleroom.scss';
+</style>

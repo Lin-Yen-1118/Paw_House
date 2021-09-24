@@ -27,7 +27,7 @@
                 <div class="user_external_connection_box">
                     <div class="user_external_connection">其他登入方式</div>
                     <div class="user_social_meadia_icons">
-                        <div class="social_meadia_icons_item"><a href=""><img src=./img/svg/google.svg></a></div>
+                        <div class="social_meadia_icons_item"><a href=""><img src=../assets/images/svg/google.svg></a></div>
                         <div class="social_meadia_icons_item"><a href=""><img src=../assets/images/svg/facebook.svg></a></div>
                         <div class="social_meadia_icons_item"><a href=""> <img src=../assets/images/svg/line.svg> </a></div>
                         <div class="social_meadia_icons_item"><a href=""> <img src=../assets/images/svg/instagram.svg></a></div>
@@ -45,3 +45,11 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    name: 'user',
+}
+</script>
+<style lang="scss" scoped>
+@import '@/scss/user.scss';
+</style>
