@@ -277,3 +277,11 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    name: 'adopt_rodent',
+}
+</script>
+<style lang="scss" scoped>
+@import '@/scss/adopt.scss';
+</style>

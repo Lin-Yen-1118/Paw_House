@@ -4,244 +4,24 @@
         <div class="lead_text"><h3>這裡有許多浪浪在等家，趕快來預約互動吧</h3></div>
         <div class="adopt" id="page1">
             <div class="adoptBox" id="adoptDogPage1">
-                <div class="adoptBoxContent">
+                <div class="adoptBoxContent" v-for="(item, index) in dogsData" :key="index">
                     <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_dog" src="../assets/images/dog/001.jpg" alt="待認養動物圖片" title="狗狗" />
+                        <img class="adopt_pic grid_item_dog" :src="require(`../assets/images/dog/${item.imgUrl}`)" alt="待認養動物圖片" title="狗狗" />
                     </a>
                     <div class="picContent">
                         <div>
-                            <p id="dog01">編號:汪零壹</p>
-                            <p class="date">進所日期:2019年11月20日</p>
-                            <p class="animalSex">性別:公</p>
-                            <p class="animalYears">年齡:約3歲</p>
-                            <p class="animalLigation">節育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:吃貨一枚</p>
+                            <p id="dog01">編號:{{ item.Serial_number }}</p>
+                            <p class="date">進所日期:{{ item.Entry_date }}</p>
+                            <p class="animalSex">性別:{{ item.Gender }}</p>
+                            <p class="animalYears">年齡:約{{ item.Age }}歲</p>
+                            <p class="animalLigation">節育狀態:{{ item.Birth_control_status }}</p>
+                            <p class="animalHealth">健康狀況:{{ item.Health_status }}</p>
+                            <p class="animalHobby">描述:{{ item.Describe }}</p>
                         </div>
                     </div>
                     <!--我要預約按鈕-->
                     <div class="adoptBtn">
                         <input type="button" value="我要預約" onclick="window.open('adoptForm.html')" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/002.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog02">編號:汪零貳</p>
-                            <p class="date">進所日期:2019年10月2日</p>
-                            <p class="animalSex">性別:母</p>
-                            <p class="animalYears">年齡:約2歲</p>
-                            <p class="animalLigation">節育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:活潑貪吃</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/003.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog03">編號:汪零參</p>
-                            <p class="date">進所日期:2020年12月13日</p>
-                            <p class="animalSex">性別:母</p>
-                            <p class="animalYears">年齡:約4歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:指間炎</p>
-                            <p class="animalHobby">描述:喜歡發呆、睡覺，<br />思考狗生</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/004.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog04">編號:汪零肆</p>
-                            <p class="date">進所日期:2020年11月11日</p>
-                            <p class="animalSex">性別:母</p>
-                            <p class="animalYears">年齡:約3歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:很貪吃，精力旺盛</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/005.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog05">編號:汪零伍</p>
-                            <p class="date">進所日期:2021年1月4日</p>
-                            <p class="animalSex">性別:母</p>
-                            <p class="animalYears">年齡:約2歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:警戒心高、膽小</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/006.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog06">編號:汪零陸</p>
-                            <p class="date">進所日期:2021年2月14日</p>
-                            <p class="animalSex">性別:公</p>
-                            <p class="animalYears">年齡:約2歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:超級黏人</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/007.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog07">編號:汪零柒</p>
-                            <p class="date">進所日期:2020年5月20日</p>
-                            <p class="animalSex">性別:母</p>
-                            <p class="animalYears">年齡:約2歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:愛翻肚肚討摸摸，<br />是個很乖巧的孩子</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/008.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog08">編號:汪零巴</p>
-                            <p class="date">進所日期:2020年6月18日</p>
-                            <p class="animalSex">性別:公</p>
-                            <p class="animalYears">年齡:約4歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:很沉穩內斂的孩子</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/009.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog09">編號:汪零玖</p>
-                            <p class="date">進所日期:2021年4月23日</p>
-                            <p class="animalSex">性別:公</p>
-                            <p class="animalYears">年齡:約1歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:活潑愛叫，喜歡到處咬</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/010.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog10">編號:汪伊零</p>
-                            <p class="date">進所日期:2020年7月14日</p>
-                            <p class="animalSex">性別:母</p>
-                            <p class="animalYears">年齡:約2歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:外冷內熱，喜歡玩球</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/011.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog11">編號:汪伊伊</p>
-                            <p class="date">進所日期:2020年8月10日</p>
-                            <p class="animalSex">性別:母</p>
-                            <p class="animalYears">年齡:約3歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:憂鬱小生一枚，喜歡吃肉乾</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
-                    </div>
-                </div>
-                <div class="adoptBoxContent">
-                    <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/dog/012.jpg" alt="待認養動物圖片" title="狗狗" />
-                    </a>
-                    <div class="picContent">
-                        <div>
-                            <p id="dog12">編號:汪伊二</p>
-                            <p class="date">進所日期:2021年3月10日</p>
-                            <p class="animalSex">性別:公</p>
-                            <p class="animalYears">年齡:約2歲</p>
-                            <p class="animalLigation">結育狀態:已節育</p>
-                            <p class="animalHealth">健康狀況:健康</p>
-                            <p class="animalHobby">描述:活潑陽光大男孩，<br />會玩接球遊戲唷</p>
-                        </div>
-                    </div>
-                    <!--我要預約按鈕-->
-                    <div class="adoptBtn">
-                        <input type="button" value="我要預約" />
                     </div>
                 </div>
             </div>
@@ -261,3 +41,146 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'adopt_dog',
+    watch: {},
+    components: {},
+
+    data() {
+        return {
+            dogsData: [
+                {
+                    Serial_number: '汪零壹',
+                    Entry_date: '1574179200000',
+                    Gender: '公',
+                    Age: 3,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '吃貨一枚',
+                    imgUrl: '001.jpg',
+                },
+                {
+                    Serial_number: '汪零貳',
+                    Entry_date: '1574179200000',
+                    Gender: '母',
+                    Age: 2,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '活潑貪吃',
+                    imgUrl: '002.jpg',
+                },
+
+                {
+                    Serial_number: '汪零參',
+                    Entry_date: '1574179200000',
+                    Gender: '母',
+                    Age: 4,
+                    Birth_control_status: '已節育',
+                    Health_status: '有指間炎',
+                    Describe: '喜歡發呆、睡覺',
+                    imgUrl: '003.jpg',
+                },
+                {
+                    Serial_number: '汪零肆',
+                    Entry_date: '1574179200000',
+                    Gender: '母',
+                    Age: 3,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '很貪吃，精力旺盛',
+                    imgUrl: '004.jpg',
+                },
+                {
+                    Serial_number: '汪零伍',
+                    Entry_date: '1574179200000',
+                    Gender: '母',
+                    Age: 2,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '警戒心高、膽小',
+                    imgUrl: '005.jpg',
+                },
+                {
+                    Serial_number: '汪零陸',
+                    Entry_date: '1574179200000',
+                    Gender: '公',
+                    Age: 2,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '超級黏人',
+                    imgUrl: '006.jpg',
+                },
+                {
+                    Serial_number: '汪零柒',
+                    Entry_date: '1574179200000',
+                    Gender: '母',
+                    Age: 2,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '愛翻肚肚討摸摸，很乖巧',
+                    imgUrl: '007.jpg',
+                },
+                {
+                    Serial_number: '汪零巴',
+                    Entry_date: '1574179200000',
+                    Gender: '公',
+                    Age: 4,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '很沉穩內斂的孩子',
+                    imgUrl: '008.jpg',
+                },
+                {
+                    Serial_number: '汪零玖',
+                    Entry_date: '1574179200000',
+                    Gender: '公',
+                    Age: 1,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '活潑愛叫，喜歡到處咬',
+                    imgUrl: '009.jpg',
+                },
+                {
+                    Serial_number: '汪伊零',
+                    Entry_date: '1574179200000',
+                    Gender: '母',
+                    Age: 2,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '外冷內熱，喜歡玩球',
+                    imgUrl: '010.jpg',
+                },
+                {
+                    Serial_number: '汪伊伊',
+                    Entry_date: '1574179200000',
+                    Gender: '母',
+                    Age: 3,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '憂鬱小生一枚，喜歡吃肉乾',
+                    imgUrl: '011.jpg',
+                },
+                {
+                    Serial_number: '汪伊二',
+                    Entry_date: '1574179200000',
+                    Gender: '公',
+                    Age: 2,
+                    Birth_control_status: '已節育',
+                    Health_status: '健康',
+                    Describe: '活潑陽光大男孩，喜歡玩接球遊戲',
+                    imgUrl: '012.jpg',
+                },
+            ],
+        }
+    },
+    methods: {},
+    mounted() {},
+    destroyed() {},
+    computed: {},
+}
+</script>
+<style lang="scss" scoped>
+@import '@/scss/adopt.scss';
+</style>

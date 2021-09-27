@@ -495,7 +495,14 @@
 </template>
 
 <script>
-export default {}
+import axios from 'axios'
+export default {
+    mounted() {
+        axios.get('http://localhost:8080/dogs').then(function(response) {
+            console.log(response.data)
+        })
+    },
+}
 </script>
 
 <style lang="scss">

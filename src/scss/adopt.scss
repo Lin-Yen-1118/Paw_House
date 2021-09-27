@@ -88,10 +88,10 @@ div.adopt > div.adoptBox {
 /* 照片與描述文字的外邊框 */
 div.adopt > div.adoptBox > div.adoptBoxContent {
     border: 1px solid #928f8f;
-
     border-radius: 10px;
-
-    /* padding: 5px; */
+    width: 300px;
+    height: 530px;
+    position: relative;
 }
 /* @media screen and (min-width: 768px) and (max-width: 992px) {
   div.adopt > div.adoptBox > div.adoptBoxContent {
@@ -107,7 +107,6 @@ div.adopt > div.adoptBox > div.adoptBoxContent > div.picContent {
     display: flex;
     flex-direction: column;
     height: auto;
-    /* border: 1px solid blue; */
 }
 /* 待認養動物描述文字區塊 */
 div.adopt > div.adoptBox > div.adoptBoxContent > div.picContent > div {
@@ -121,15 +120,13 @@ div.adopt > div.adoptBox > div.adoptBoxContent > div.picContent > div {
 }
 /* 我要預約按鈕樣式設定 */
 div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn {
-    /* border: 1px solid blue; */
     display: block;
-    /* position: absolute; */
-    bottom: 10px;
+    position: absolute;
+    bottom: 0px;
     left: 15%;
     padding: 12px;
 }
 div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > input {
-    /* background-color: #a63316; */
     background-color: #ea5d39;
     color: #ffffff;
     border-radius: 25px;

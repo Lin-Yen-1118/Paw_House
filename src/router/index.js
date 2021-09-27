@@ -25,6 +25,42 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "backend" */ "../views/adopt_main.vue"),
   },
+
+  {
+    path: "/adopt_dog",
+    name: "adopt_dog",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/adopt_dog.vue"),
+  },
+
+  {
+    path: "/adopt_cat",
+    name: "adopt_cat",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/adopt_cat.vue"),
+  },
+  {
+    path: "/adopt_rabbit",
+    name: "adopt_rabbit",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/adopt_rabbit.vue"),
+  },
+
+  {
+    path: "/adopt_rodent",
+    name: "adopt_rodent",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/adopt_rodent.vue"),
+  },
+
+
+
+
+
+
+
+
+
   {
     path: "/room",
     name: "room",
