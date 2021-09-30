@@ -28,38 +28,45 @@ const routes = [
 
   {
     path: "/adopt_dog",
-    name: "adopt_dog",
+    name: "dogs",
     component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/adopt_dog.vue"),
+      import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
   },
 
   {
     path: "/adopt_cat",
-    name: "adopt_cat",
+    name: "cats",
     component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/adopt_cat.vue"),
+      import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
   },
   {
     path: "/adopt_rabbit",
-    name: "adopt_rabbit",
+    name: "rabbits",
     component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/adopt_rabbit.vue"),
+      import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
   },
 
   {
     path: "/adopt_rodent",
-    name: "adopt_rodent",
+    name: "rodents",
+    redirect: { name: 'guineapigs' },
     component: () =>
       import(/* webpackChunkName: "backend" */ "../views/adopt_rodent.vue"),
+    children: [
+      {
+        path: "/adopt_guineapigs",
+        name: "guineapigs",
+        component: () =>
+          import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
+      },
+      {
+        path: "/adopt_hamsters",
+        name: "hamsters",
+        component: () =>
+          import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
+      },
+    ],
   },
-
-
-
-
-
-
-
-
 
   {
     path: "/room",

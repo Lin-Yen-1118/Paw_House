@@ -7,7 +7,7 @@ var mock = new MockAdapter(axios);
 // Mock any GET request to /users
 // arguments for reply are (status, data, headers)
 
-mock.onGet("http://localhost:8080/dogs").reply(200, {
+mock.onGet(`${process.env.BASEURL}/dogs`).reply(200, {
   dogs: [{
     "Serial_number": "汪零壹",
     "Entry_date": "1574179200000",
@@ -275,7 +275,7 @@ mock.onGet("http://localhost:8080/dogs").reply(200, {
 });
 
 
-mock.onGet("http://localhost:8080/cats").reply(200, {
+mock.onGet(`${process.env.BASEURL}/cats`).reply(200, {
   cats: [{
     "Serial_number": "喵零壹",
     "Entry_date": "1574179200000",
@@ -521,7 +521,7 @@ mock.onGet("http://localhost:8080/cats").reply(200, {
 });
 
 
-mock.onGet("http://localhost:8080/rabbits").reply(200, {
+mock.onGet(`${process.env.BASEURL}/rabbits`).reply(200, {
   rabbits: [{
     "Serial_number": "兔零壹",
     "Entry_date": "1574179200000",
@@ -790,7 +790,7 @@ mock.onGet("http://localhost:8080/rabbits").reply(200, {
   ],
 });
 
-mock.onGet("http://localhost:8080/guineapigs").reply(200, {
+mock.onGet(`${process.env.BASEURL}/guineapigs`).reply(200, {
   guineapigs: [
     {
       "Serial_number": "天零壹",
@@ -919,7 +919,7 @@ mock.onGet("http://localhost:8080/guineapigs").reply(200, {
 });
 
 
-mock.onGet("http://localhost:8080/hamsters").reply(200, {
+mock.onGet(`${process.env.BASEURL}/hamsters`).reply(200, {
   hamsters: [
     {
       "Serial_number": "小伊",

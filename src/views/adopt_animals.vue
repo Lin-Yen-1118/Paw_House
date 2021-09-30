@@ -3,14 +3,14 @@
         <!-- 前導文字 -->
         <div class="lead_text"><h3>這裡有許多浪浪在等家，趕快來預約互動吧</h3></div>
         <div class="adopt" id="page1">
-            <div class="adoptBox" id="adoptCatPage1">
-                <div class="adoptBoxContent">
+            <div class="adoptBox" id="adoptRabbitPage1">
+                <div class="adoptBoxContent" v-for="(item, index) in animalsList" :key="index">
                     <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_animal" src="../assets/images/cat/001.jpg" alt="待認養動物圖片" title="貓貓" />
+                        <img class="adopt_pic grid_item_rabbit" :src="require(`../assets/images/${$route.name}/${item.imgUrl}`)" alt="待認養動物圖片" title="狗狗" />
                     </a>
                     <div class="picContent">
                         <div>
-                            <p>編號:{{ item.Serial_number }}</p>
+                            <p id="rabbit01">編號:{{ item.Serial_number }}</p>
                             <p class="date">進所日期:{{ item.Entry_date }}</p>
                             <p class="animalSex">性別:{{ item.Gender }}</p>
                             <p class="animalYears">年齡:約{{ item.Age }}歲</p>
@@ -26,24 +26,49 @@
                 </div>
             </div>
         </div>
-
         <!-- 分頁 -->
         <div class="adopt_pagination_box">
             <ul class="pagination">
                 <li><a href="#">«</a></li>
                 <li>
-                    <a class="active" id="adoptCatPage1" href="adopt_cat.html">1</a>
+                    <a class="active" href="#">1</a>
+                    <a class="" href="#">2</a>
+                    <a class="" href="#">3</a>
                 </li>
-                <li><a id="adoptCatPage2" href="adopt_cat_page2.html">2</a></li>
-                <!-- <li><a id="adoptCatPage3" href="adopt_cat_page3.html">3</a></li> -->
+                <!-- <li><a id="adoptGuineapigPage2" href="adopt_dog_page2.html">2</a></li>
+        <li><a id="adoptGuineapigPage3" href="adopt_dog_page3.html">3</a></li> -->
                 <li><a href="#">»</a></li>
             </ul>
         </div>
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
-    name: 'adopt_',
+    name: 'adopt_animal',
+    watch: {},
+    components: {},
+
+    data() {
+        return {
+            animalsList: [],
+        }
+    },
+    methods: {
+        getAnimalsList(animalsName) {
+            axios.get(`${process.env.BASEURL}/${animalsName}`).then((res) => {
+                const animalsList = res.data[animalsName]
+                this.animalsList = animalsList
+            })
+        },
+    },
+    mounted() {
+        const animalsName = this.$route.name
+        this.getAnimalsList(animalsName)
+        console.log(this)
+    },
+    destroyed() {},
+    computed: {},
 }
 </script>
 <style lang="scss" scoped>
