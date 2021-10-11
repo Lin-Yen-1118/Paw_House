@@ -73,7 +73,7 @@
                     </li>
                     <!-- 周邊商品 -->
                     <li>
-                        <router-link to="/product" class="link_style">
+                        <router-link to="/products" class="link_style">
                             <span>
                                 <img id="merchandise" src="../assets/images/svg/mouse01.svg" />
                             </span>
@@ -96,7 +96,8 @@
                     <!-- 我的訂單 -->
                     <li>
                         <router-link to="/cart" class="link_style">
-                            <span>
+                            <span
+                                >{{ getProductLength }}
                                 <img id="cart" src="../assets/images/svg/shopping-cart.svg" />
                             </span>
                         </router-link>
@@ -117,8 +118,16 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name: 'Header',
+    computed: {
+        // 使用对象展开运算符将 getter 混入 computed 对象中
+        ...mapGetters([
+            'getProductLength',
+            // ...
+        ]),
+    },
 }
 </script>
 

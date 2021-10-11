@@ -6,7 +6,7 @@
             <div class="adoptBox" id="adoptRabbitPage1">
                 <div class="adoptBoxContent" v-for="(item, index) in animalsList" :key="index">
                     <a href="#" title="adopt">
-                        <img class="adopt_pic grid_item_rabbit" :src="require(`../assets/images/${$route.name}/${item.imgUrl}`)" alt="待認養動物圖片" title="狗狗" />
+                        <img class="adopt_pic grid_item_rabbit" :src="require(`../assets/images/${$route.name}/${item.imgUrl}`)" alt="待認養動物圖片" title="" />
                     </a>
                     <div class="picContent">
                         <div>
@@ -65,7 +65,6 @@ export default {
     mounted() {
         const animalsName = this.$route.name
         this.getAnimalsList(animalsName)
-        console.log(this)
     },
     destroyed() {},
     computed: {},

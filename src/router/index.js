@@ -93,8 +93,8 @@ const routes = [
       import(/* webpackChunkName: "backend" */ "../views/user.vue"),
   },
   {
-    path: "/product",
-    name: "product",
+    path: "/products",
+    name: "products",
     component: () =>
       import(/* webpackChunkName: "backend" */ "../views/product.vue"),
   },

@@ -1106,7 +1106,82 @@ mock.onGet(`${process.env.BASEURL}/hamsters`).reply(200, {
 
 });
 
+mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
+  products: [{
+    "Product_Name": "美味牛肉",
+    "Commodity_Information": "嚴選澳洲牛肉，美味無負擔。",
+    "Product_Ecification": "150g",
+    "imgUrl": "meat.jpg",
+    "Price": "105",
+  },
+  {
+    "Product_Name": "低脂雞肉",
+    "Commodity_Information": "嚴選國產雞肉，讓毛孩吃得健康。",
+    "Product_Ecification": "150g",
+    "imgUrl": "chicken.jpg",
+    "Price": "100",
+  },
+  {
+    "Product_Name": "低溫烘乾牛肉條",
+    "Commodity_Information": "嚴選澳洲牛肉，搭配獨特技術鎖住食材營養，美味又健康。",
+    "Product_Ecification": "100g",
+    "imgUrl": "meat02.jpg",
+    "Price": "100",
+  },
+  {
+    "Product_Name": "新鮮鮭魚肉(切丁)",
+    "Commodity_Information": "嚴選挪威鮭魚，美味又健康。",
+    "Product_Ecification": "120g",
+    "imgUrl": "fish01.jpg",
+    "Price": "120",
+  },
+  {
+    "Product_Name": "嚴選鰹魚乾",
+    "Commodity_Information": "嚴選鰹魚，美味又健康。",
+    "Product_Ecification": "120g",
+    "imgUrl": "fish02.jpg",
+    "Price": "150",
+  },
+  {
+    "Product_Name": "綜合嚴選乾草",
+    "Commodity_Information": "本館自種鮮草，美味營養。",
+    "Product_Ecification": "200g",
+    "imgUrl": "grass02.jpg",
+    "Price": "100",
+  },
+  {
+    "Product_Name": "美味蔬菜組合",
+    "Commodity_Information": "本館自種無農藥蔬果，美味又健康。",
+    "Product_Ecification": "50g",
+    "imgUrl": "vagatable01.jpg",
+    "Price": "50",
+  },
+  {
+    "Product_Name": "嚴選早摘嫩牧草",
+    "Commodity_Information": "本館自種純淨牧草，適口性佳。",
+    "Product_Ecification": "300g",
+    "imgUrl": "grass03.jpg",
+    "Price": "150",
+  },
+    // {
+    //   "Product_Name": "待上架",
+    //   "Commodity_Information": "待上架",
+    //   "Product_Ecification": "待上架",
+    //   "imgUrl": "grass03.jpg",
+    //   "Price": "0",
+    // },
 
+
+
+
+
+
+
+
+
+  ],
+
+});
 
 // axios.get("/dogs").then(function (response) {
 //   console.log(response.data);
