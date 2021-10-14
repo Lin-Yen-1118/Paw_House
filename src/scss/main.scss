@@ -387,7 +387,7 @@ div.index_adopt_box > div.index_adopt_item_box > div.index_adopt_item > div.adop
     height: 100%;
     animation-name: adopt_pic;
     animation-duration: 4s;
-    animation-iteration-count: infinite;
+    animation-iteration-amount: infinite;
     animation-direction: alternate-reverse;
     padding: 10px;
 }
@@ -494,7 +494,7 @@ div.index_adopt_box > div.index_adopt_item_box > div.index_adopt_item > div.adop
     color: rgb(221, 221, 221);
     animation-name: adopt_txt;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-amount: infinite;
     animation-direction: alternate-reverse;
     animation-delay: 2s;
 }
@@ -881,7 +881,7 @@ div.index_petroom_box > div.index_petroom_content > div.index_petroom_item > div
     animation-name: petroom_animation;
     animation-duration: 2s;
     animation-delay: 0.2s;
-    animation-iteration-count: infinite;
+    animation-iteration-amount: infinite;
     animation-direction: reverse;
 }
 @keyframes petroom_animation {

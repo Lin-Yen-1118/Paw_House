@@ -18,7 +18,16 @@ export default new Vuex.Store({
   mutations: {
     increment(state, params) {
       state.productList.push(params)
-    }
+    },
+    delCartList(state, id) {
+      state.productList.forEach((products, index) => {
+        if (products.Id === id) {
+          state.productList.splice(index, 1)
+          return
+        }
+      })
+    },
+
   },
   actions: {
 

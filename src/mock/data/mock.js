@@ -1113,6 +1113,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
     "Product_Ecification": "150g",
     "imgUrl": "meat.jpg",
     "Price": "105",
+    "Id": "meat",
   },
   {
     "Product_Name": "低脂雞肉",
@@ -1120,6 +1121,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
     "Product_Ecification": "150g",
     "imgUrl": "chicken.jpg",
     "Price": "100",
+    "Id": "chicken",
   },
   {
     "Product_Name": "低溫烘乾牛肉條",
@@ -1127,6 +1129,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
     "Product_Ecification": "100g",
     "imgUrl": "meat02.jpg",
     "Price": "100",
+    "Id": "beef_strips",
   },
   {
     "Product_Name": "新鮮鮭魚肉(切丁)",
@@ -1134,6 +1137,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
     "Product_Ecification": "120g",
     "imgUrl": "fish01.jpg",
     "Price": "120",
+    "Id": "salmon_fish_dried",
   },
   {
     "Product_Name": "嚴選鰹魚乾",
@@ -1141,6 +1145,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
     "Product_Ecification": "120g",
     "imgUrl": "fish02.jpg",
     "Price": "150",
+    "Id": "dried_bonito",
   },
   {
     "Product_Name": "綜合嚴選乾草",
@@ -1148,6 +1153,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
     "Product_Ecification": "200g",
     "imgUrl": "grass02.jpg",
     "Price": "100",
+    "Id": "grass",
   },
   {
     "Product_Name": "美味蔬菜組合",
@@ -1155,6 +1161,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
     "Product_Ecification": "50g",
     "imgUrl": "vagatable01.jpg",
     "Price": "50",
+    "Id": "vegetables",
   },
   {
     "Product_Name": "嚴選早摘嫩牧草",
@@ -1162,6 +1169,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
     "Product_Ecification": "300g",
     "imgUrl": "grass03.jpg",
     "Price": "150",
+    "Id": "tender_grass",
   },
     // {
     //   "Product_Name": "待上架",

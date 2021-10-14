@@ -139,7 +139,7 @@ div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_i
     animation-direction: alternate;
 
     /* animation-direction: reverse; */
-    animation-iteration-count: infinite;
+    animation-iteration-amount: infinite;
     /* border: 1px solid red; */
 }
 div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item > div.adopt_txt {
@@ -156,7 +156,7 @@ div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_i
     animation-delay: 1s;
     animation-duration: 3s;
     animation-direction: alternate;
-    animation-iteration-count: infinite;
+    animation-iteration-amount: infinite;
 }
 
 div.adoption_box {
