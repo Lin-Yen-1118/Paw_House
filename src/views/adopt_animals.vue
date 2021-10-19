@@ -20,9 +20,11 @@
                         </div>
                     </div>
                     <!--我要預約按鈕-->
-                    <div class="adoptBtn">
+
+                    <!-- <div class="adoptBtn">
                         <input type="button" value="我要預約" onclick="window.open('adoptForm.html')" />
-                    </div>
+                    </div> -->
+                    <button type="button" class="adoptBtn"></button>
                 </div>
             </div>
         </div>
@@ -40,14 +42,16 @@
                 <li><a href="#">»</a></li>
             </ul>
         </div>
+        <adoptForm></adoptForm>
     </div>
 </template>
 <script>
 import axios from 'axios'
+import adoptForm from '../components/adopt_form.vue'
 export default {
     name: 'adopt_animal',
     watch: {},
-    components: {},
+    components: { adoptForm },
 
     data() {
         return {

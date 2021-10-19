@@ -172,7 +172,7 @@ nav > div > ul.user_cart > li > a:hover > img#user {
 nav > div > ul.user_cart > li > a:hover > img#cart {
     animation-name: cart_icon;
     animation-duration: 3s;
-    animation-iteration-amount: 3;
+    animation-iteration-count: 3;
     animation-direction: alternate-reverse;
 }
 @keyframes cart_icon {
