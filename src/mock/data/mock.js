@@ -1,6 +1,6 @@
 var axios = require("axios");
 var MockAdapter = require("axios-mock-adapter");
-
+import address from '@/json/address.json'
 // This sets the mock adapter on the default instance
 var mock = new MockAdapter(axios);
 
@@ -1190,7 +1190,7 @@ mock.onGet(`${process.env.BASEURL}/products`).reply(200, {
   ],
 
 });
-
+mock.onGet(`${process.env.BASEURL}/address`).reply(200, address);
 // axios.get("/dogs").then(function (response) {
 //   console.log(response.data);
 // });

@@ -119,6 +119,27 @@ div.adopt > div.adoptBox > div.adoptBoxContent > div.picContent > div {
     /* position: relative; */
 }
 /* 我要預約按鈕樣式設定 */
+// div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn {
+//     display: block;
+//     position: absolute;
+//     bottom: 0px;
+//     left: 15%;
+//     padding: 12px;
+// }
+// div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > input {
+//     background-color: #ea5d39;
+//     color: #ffffff;
+//     border-radius: 25px;
+//     width: 200px;
+//     height: 40px;
+//     border: 1px solid transparent;
+// }
+// div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > input:hover {
+//     background-color: #cf330c;
+//     color: #ffffff;
+// }
+
+/*我要預約按鈕樣式設定-改成這樣試試看*/
 div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn {
     display: block;
     position: absolute;
@@ -126,7 +147,7 @@ div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn {
     left: 15%;
     padding: 12px;
 }
-div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > input {
+div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > button {
     background-color: #ea5d39;
     color: #ffffff;
     border-radius: 25px;
@@ -134,25 +155,15 @@ div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > input {
     height: 40px;
     border: 1px solid transparent;
 }
-div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > input:hover {
+div.adopt > div.adoptBox > div.adoptBoxContent > div.adoptBtn > button:hover {
     background-color: #cf330c;
     color: #ffffff;
 }
-/* div.adopt > div.adoptBox > div.adoptBoxContent > p {
-  border: 1px solid red;
-  display: none;
-  overflow: hidden;
-}
-div.adopt > div.adoptBox > div.adoptBoxContent > a > img:checked ~ p {
-  display: block;
-  overflow: visible;
-} */
+
 /* 分頁 */
 div.adopt_pagination_box {
     display: flex;
     margin: 50px auto;
-
-    /* border: 1px solid red; */
 }
 div.adopt_pagination_box > ul.pagination {
     display: inline-block;

@@ -10,7 +10,7 @@
                     </a>
                     <div class="picContent">
                         <div>
-                            <p id="rabbit01">編號:{{ item.Serial_number }}</p>
+                            <p id="animals">編號:{{ item.Serial_number }}</p>
                             <p class="date">進所日期:{{ item.Entry_date }}</p>
                             <p class="animalSex">性別:{{ item.Gender }}</p>
                             <p class="animalYears">年齡:約{{ item.Age }}歲</p>
@@ -20,14 +20,13 @@
                         </div>
                     </div>
                     <!--我要預約按鈕-->
-
-                    <!-- <div class="adoptBtn">
-                        <input type="button" value="我要預約" onclick="window.open('adoptForm.html')" />
-                    </div> -->
-                    <button type="button" class="adoptBtn"></button>
+                    <div class="adoptBtn">
+                        <button @click="toggleAdoptForm()">我要預約</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <adoptForm v-show="isShow" :close.sync="isShow"></adoptForm>
         <!-- 分頁 -->
         <div class="adopt_pagination_box">
             <ul class="pagination">
@@ -42,7 +41,6 @@
                 <li><a href="#">»</a></li>
             </ul>
         </div>
-        <adoptForm></adoptForm>
     </div>
 </template>
 <script>
@@ -56,6 +54,7 @@ export default {
     data() {
         return {
             animalsList: [],
+            isShow: false,
         }
     },
     methods: {
@@ -64,6 +63,9 @@ export default {
                 const animalsList = res.data[animalsName]
                 this.animalsList = animalsList
             })
+        },
+        toggleAdoptForm: function() {
+            this.isShow = !this.isShow
         },
     },
     mounted() {

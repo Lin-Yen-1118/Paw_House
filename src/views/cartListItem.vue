@@ -33,8 +33,7 @@ export default {
     props: {
         products: {
             type: Object,
-            // Object or array defaults must be returned from
-            // a factory function
+
             default: function() {
                 return {}
             },
@@ -44,12 +43,6 @@ export default {
         decrease() {
             this.amount = this.amount - 1
             this.amount < 0 ? (this.amount = 0) : 0
-
-            // if(this.amount < 0){
-            //    (this.amount = 0)
-            // }else{
-            //   return
-            // }
         },
         increase() {
             this.amount = this.amount + 1
@@ -57,23 +50,13 @@ export default {
         delCartList(id) {
             this.$store.commit('delCartList', id)
         },
-        ...mapMutations(
-            ['delCartList']
-            // 将 `this.add()` 映射为 `this.$store.commit('delCartList')`
-        ),
+        ...mapMutations(['delCartList']),
     },
 
     mounted() {
         this.amount
     },
     destroyed() {},
-    // computed: {
-    //     // 使用对象展开运算符将 getter 混入 computed 对象中
-    //     ...mapGetters([
-    //         'getProductList',
-    //         // ...
-    //     ]),
-    // },
 }
 </script>
 <style lang="scss" scoped>
