@@ -64,7 +64,7 @@ ul.pagination li a:hover:not(.active) {
 }
 /* ul.pagination li a:hover::before{
   content:"";
-  background-image: url(../assets/images/svg/paw.svg);
+  background-image: url(~@/assets/images/svg/paw.svg);
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
@@ -325,7 +325,7 @@ div.room_box > div.booking_cards > div.booking_info > div.booking_info_descripti
 }
 div.room_box > div.booking_cards > div.booking_info > div.booking_info_description > div.rooms_main_details > p:before {
     content: '';
-    background-image: url(../assets/images/svg/paw.svg);
+    background-image: url(~@/assets/images/svg/paw.svg);
     background-repeat: no-repeat;
     width: 15px;
     height: 15px;

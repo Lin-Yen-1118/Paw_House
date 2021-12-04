@@ -33,5 +33,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '@/scss/about_me.scss';
+@import '@/scss/main.scss';
 </style>

@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+#logo {
+    max-width: 80px;
+    width: 100%;
+    margin: 5px;
+}
+.logo {
+    display: inline-block;
+    padding: 10px 15px;
+}
+li {
+    list-style: none;
+    line-height: 35px;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: #ff0000;
+}
+a:active {
+    color: #0000ff;
+}

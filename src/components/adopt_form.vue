@@ -103,17 +103,18 @@ export default {
     name: 'adoptForm',
     data() {
         return {
-            addressList: [],
-            cityList: [],
-            areaList: [],
-            username: '',
-            usernameError: false,
+            addressList: [], //整個大的地址陣列
+            cityList: [], //縣市的陣列
+            areaList: [], //地區的陣列
+            username: '', //預設是空值
+            usernameError: true,
         }
     },
 
     components: {},
 
     methods: {
+        //關閉認養表單的彈窗
         closeAdoptForm() {
             this.$emit('update:close', false)
         },
@@ -123,27 +124,26 @@ export default {
                 this.addressList = addressList.address
             })
         },
-        addresslist() {
-            const cityList = []
-            const address = this.addressList
-            address.forEach((item) => {
-                cityList.push(item.CityName)
+        createCityList() {
+            //生成 選擇縣市清單
+            //將 this.addressList 每個物件依序抽出 CityName 放入 this.cityList (選擇縣市清單)
+            this.addressList.forEach((item) => {
+                this.cityList.push(item.CityName)
             })
-            this.cityList = cityList
         },
         getAreaList($event) {
-            let addressList = this.addressList
+            // let addressList = this.addressList
+            //生成 選擇地區清單 當選擇好縣市後，呈現可選擇的對應物件(選擇地區清單)
             const selectedOptionName = $event.target.value
-            const optionObjet = addressList.filter((item) => {
+            const optionObjet = this.addressList.filter((item) => {
                 return item.CityName === selectedOptionName
             })
             this.areaList = optionObjet[0].AreaList
         },
     },
     async mounted() {
-        const addressName = this.$route.name
-        await this.getaddressList(addressName)
-        this.addresslist()
+        await this.getaddressList()
+        this.createCityList()
     },
     computed: {},
     watch: {

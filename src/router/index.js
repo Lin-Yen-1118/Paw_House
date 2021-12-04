@@ -73,7 +73,16 @@ const routes = [
     name: "room",
     component: () =>
       import(/* webpackChunkName: "backend" */ "../views/room.vue"),
+
   },
+
+  {
+    path: "/room_detail",
+    name: "room_detail",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/room_detail.vue"),
+  },
+
   {
     path: "/pet_accommodation",
     name: "pet_accommodation",
@@ -97,6 +106,12 @@ const routes = [
     name: "products",
     component: () =>
       import(/* webpackChunkName: "backend" */ "../views/product.vue"),
+  },
+  {
+    path: "/item",
+    name: "item",
+    component: () =>
+      import(/* webpackChunkName: "backend" */ "../views/item.vue"),
   },
 
 ];

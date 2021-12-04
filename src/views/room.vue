@@ -1,53 +1,7 @@
 <template>
+    <!-- <router-link :class="$route.name === 'guineapigs' ? 'active' : ''" id="adoptRodentPage1" to="/adopt_guineapigs"><p>天竺鼠</p></router-link> -->
     <div>
-        <!-- 房型分頁 -->
-        <!-- <div class="pagination_box">
-      <ul class="pagination">
-        <li>
-          <a id="SmallRoom" href="bookingroom_smallroom.html">溫馨小房</a>
-        </li>
-        <li>
-          <a id="LargeRoom" href="bookingroom_largeroom.html">寬敞大房</a>
-        </li>
-        <li>
-          <a a id="LuxuryRoom" href="bookingroom_luxuryroom.html">豪華家庭房</a>
-        </li>
-      </ul>
-    </div> -->
-
         <div class="room_box">
-            <!-- 左邊區塊 -->
-            <!-- 漫畫照片 -->
-            <!-- <div class="bookingroom_box">
-        <div class="bookingroom_pic">
-          <a href="#" target="_blank"
-            ><img
-              class="booking_img only_people"
-              src="./img/svg/bookingroom_only_people.svg"
-          /></a>
-        </div>
-        <div class="bookingroom_pic">
-          <a href="#" target="_blank"
-            ><img
-              class="booking_img bringing_pet"
-              src="./img/svg/bookingroom_bringing_pet.svg"
-          /></a>
-        </div>
-        <div class="bookingroom_pic">
-          <a href="#" target="_blank"
-            ><img
-              class="booking_img pet_boarding"
-              src="./img/svg/bookingroom_pet_boarding.svg"
-          /></a>
-        </div>
-        <div class="bookingroom_pic">
-          <a href="#" target="_blank"
-            ><img
-              class="booking_img welcome"
-              src="./img/svg/bookingroom_welcome.svg"
-          /></a>
-        </div>
-      </div> -->
             <!-- 右邊區塊 -->
             <div class="right_box">
                 <div class="room_leading">
@@ -57,7 +11,7 @@
                 <div class="room_review_box">
                     <div class="room_review">
                         <div class="room_pic">
-                            <a href="./bookingroom_smallroom.html"><img class="rooms_pic" src=../assets/images/room/L_room03.jpg></a>
+                            <router-link to="room_detail"><img class="rooms_pic" src=../assets/images/room/L_room03.jpg></router-link>
                         </div>
                         <div class="room_overview">
                             <h3>溫馨小房</h3>
@@ -177,8 +131,10 @@
     </div>
 </template>
 <script>
+//import RoomDetail from '@/views/room_detail.vue'
 export default {
     name: 'room',
+    // components: { RoomDetail },
 }
 </script>
 <style lang="scss" scoped>

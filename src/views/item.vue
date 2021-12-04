@@ -1,22 +1,27 @@
 <template>
     <div class="products_items">
-        <img :src="require(`../assets/images/${$route.name}/${products.imgUrl}`)" alt="商品圖片" title="好吃食物" />
-        <div class="products_content">
-            <h4>{{ products.Product_Name }}</h4>
-            <p>{{ products.Commodity_Information }}</p>
-            <p>商品規格:{{ products.Product_Ecification }}</p>
-            <div class="price">${{ products.Price }}</div>
-        </div>
-        <div class="count_box">
-            <p>數量</p>
-            <div class="amount">
-                <button class="count_btn" id="decrease_btn" @click="decrease">-</button>
-                {{ amount }}
-                <button class="count_btn" id="increase_btn" @click="increase">+</button>
+        <div class="products_content_box">
+            <img :src="require(`../assets/images/${$route.name}/${products.imgUrl}`)" alt="商品圖片" title="好吃食物" />
+
+            <div class="products_content">
+                <h4>{{ products.Product_Name }}</h4>
+                <p>{{ products.Commodity_Information }}</p>
+                <p>商品規格:{{ products.Product_Ecification }}</p>
             </div>
         </div>
-        <div class="buying_button" @click="add_cart">
-            <input type="button" value="加入購物車" name="buying_button" />
+        <div class="count_buying_box">
+            <div class="count_box">
+                <p>數量</p>
+                <div>
+                    <button class="count_btn" id="decrease_btn" @click="decrease">-</button>
+                    <span class="amount">{{ amount }}</span>
+                    <button class="count_btn" id="increase_btn" @click="increase">+</button>
+                </div>
+                <div class="price">${{ products.Price }}</div>
+            </div>
+            <div class="buying_button" @click="add_cart">
+                <input type="button" value="加入購物車" name="buying_button" />
+            </div>
         </div>
     </div>
 </template>
@@ -73,6 +78,3 @@ export default {
     // },
 }
 </script>
-<style lang="scss" scoped>
-@import '@/scss/products.scss';
-</style>

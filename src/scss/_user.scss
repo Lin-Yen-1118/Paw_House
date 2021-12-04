@@ -1,6 +1,6 @@
 /* 清晰背景圖 */
 div.backgroung_cover {
-    background-image: url(../assets/images/bg/user_bg.jpg);
+    background-image: url(~@/assets/images/bg/user_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -109,10 +109,6 @@ div.backgroung_cover > div.user_box > div.user > div.user_external_connection_bo
     margin: 5px 0px;
 }
 
-div.backgroung_cover > div.user_box > div.user > div.user_external_connection_box > div.user_social_meadia_icons > div.social_meadia_icons_item {
-    /* border: 1px solid blue; */
-    /* display: inline-block; */
-}
 div.backgroung_cover > div.user_box > div.user > div.user_external_connection_box > div.user_social_meadia_icons > div.social_meadia_icons_item > a > img {
     width: 30px;
     margin: 5px;

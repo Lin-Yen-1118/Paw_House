@@ -78,7 +78,7 @@
         <div class="adoption_box">
             <div class="adoption_notice">
                 <h3>其他注意事項</h3>
-                <img src="../assets/images/bg/19.jpg" />
+
                 <div class="adoption_notice_content adopt_need_to_know">
                     <h4>請詳細閱讀以下認養須知：</h4>
                     <ul class="adoptionBox">
@@ -101,6 +101,7 @@
                         <li>飼養方式</li>
                     </ul>
                 </div>
+                <!-- <img src="../assets/images/bg/19.jpg" /> -->
             </div>
         </div>
 
@@ -347,5 +348,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '@/scss/adopt_main.scss';
+@import '@/scss/main.scss';
 </style>

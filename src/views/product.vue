@@ -42,6 +42,3 @@ export default {
     computed: {},
 }
 </script>
-<style lang="scss" scoped>
-@import '@/scss/products.scss';
-</style>

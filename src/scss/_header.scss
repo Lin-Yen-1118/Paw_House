@@ -1,0 +1,318 @@
+/*導覽列*/
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    @include tablet {
+        top: 15px;
+    }
+}
+
+nav {
+    @include flex_center;
+    justify-content: space-between;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(255, 255, 250, 0.8);
+    width: 100%;
+    max-height: 60px;
+    @include tablet {
+        height: 100px;
+        max-width: 992px;
+        width: 100%;
+        padding-right: 20px;
+    }
+}
+
+#introduction,
+#adoption,
+#room,
+#merchandise,
+#user,
+#cart {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+#user,
+#cart::before {
+    content: '';
+}
+
+nav {
+    div.nav_bar {
+        ul.header_bar {
+            display: flex;
+            justify-content: left;
+            list-style: none;
+            margin: 0px;
+            font-size: 0px;
+            @include tablet {
+                flex-direction: column;
+                position: absolute;
+                top: 90px;
+                left: 0px;
+                background-color: rgba(255, 255, 250, 0.8);
+                display: none;
+                transform: translateY(-20%);
+                transition: 1s;
+            }
+            @include pad {
+                top: 100%;
+                right: 0px;
+            }
+            @include mobile {
+                top: 60px;
+            }
+            li {
+                display: flex;
+                align-items: center;
+                padding-right: 15px;
+                font-size: 24px;
+                vertical-align: middle;
+                text-align: center;
+                a {
+                    display: flex;
+                    color: #000000;
+                    display: inline-block;
+                    vertical-align: middle;
+                    span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-weight: 700;
+                    }
+                    &:hover {
+                        span {
+                            color: #644d08;
+                            img {
+                                transform: rotate(360deg);
+                                transition-duration: 1s;
+                            }
+                        }
+                        img#user {
+                            animation-name: user_icon;
+                            animation-duration: 3s;
+                            animation-direction: reverse;
+                            @keyframes user_icon {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+                                50% {
+                                    transform: rotate(360deg);
+                                }
+                                100% {
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+                        img#cart {
+                            animation-name: cart_icon;
+                            animation-duration: 3s;
+                            animation-iteration-count: 3;
+                            animation-direction: alternate-reverse;
+                            @keyframes cart_icon {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+                                50% {
+                                    transform: rotate(180deg);
+                                }
+                                100% {
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 以下為:我要領養-下拉選單 */
+li.adopt_menu {
+    position: relative;
+    ul.adopt_menu_select_menu {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        display: none;
+        flex-direction: column;
+        @include tablet {
+            width: 50%;
+            top: 90%;
+            z-index: 1;
+        }
+    }
+    &:hover {
+        ul.adopt_menu_select_menu {
+            display: block;
+        }
+    }
+    li.adopt_menu_select {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        @include tablet {
+            left: 120%;
+        }
+        a {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000000;
+                font-size: 20px;
+                text-align: center;
+                background-color: rgba(255, 255, 250, 0.7);
+                height: 50px;
+                width: 100px;
+                @include tablet {
+                    width: 100%;
+                    position: relative;
+                    z-index: 1;
+                    background-color: rgba(255, 255, 250, 0.9);
+                }
+            }
+            &:focus {
+                span {
+                    background-color: rgba(255, 255, 250, 0.7);
+                    color: #edece9;
+                }
+            }
+            &:hover {
+                span {
+                    background-color: rgba(255, 255, 250, 0.3);
+                    color: #644d08;
+                }
+            }
+        }
+    }
+}
+
+/* 以下為:住宿-下拉選單 booking_rooms_menu */
+li.booking_rooms_menu {
+    position: relative;
+    ul.booking_rooms_menu_select_menu {
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        top: 80%;
+        display: none;
+        flex-direction: column;
+        transform: translate(10%, 10%);
+        @include tablet {
+            width: 50%;
+            top: 10px;
+            height: 20px;
+        }
+        @include mobile {
+            top: 40px;
+        }
+    }
+    &:hover {
+        .booking_rooms_menu_select_menu {
+            display: block;
+        }
+    }
+    li.booking_rooms_select {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        @include tablet {
+            left: 120%;
+            top: 20px;
+        }
+        a {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                color: #000000;
+                font-size: 20px;
+                text-align: center;
+                background-color: rgba(255, 255, 250, 0.5);
+                height: 50px;
+                @include tablet {
+                    width: 100%;
+                    background-color: rgba(255, 255, 250, 0.9);
+                }
+            }
+        }
+        &:hover {
+            span {
+                background-color: rgba(255, 255, 250, 0.3);
+                color: #644d08;
+            }
+        }
+        &:focus {
+            span {
+                background-color: rgba(255, 255, 250, 0.5);
+                color: #edece9;
+            }
+        }
+    }
+}
+
+ul.user_cart {
+    display: flex;
+    flex-direction: row;
+    li {
+        margin: 0px 5px;
+    }
+}
+
+/* 漢堡選單 */
+label {
+    .burger_box {
+        cursor: pointer;
+        width: 50px;
+        height: 65px;
+        display: none;
+    }
+    .bgr_bar {
+        width: 40px;
+        height: 5px;
+        background-color: rgb(0, 0, 0);
+        position: relative;
+        left: 20px;
+        top: 20px;
+        border-radius: 5px;
+    }
+    .top {
+        margin-bottom: 6px;
+    }
+    .bottom {
+        margin-top: 6px;
+    }
+}
+/* html用input的checkbox與for特性做漢堡選單的選取器 */
+/* css用checked做出漢堡隱藏選單出現的效果 */
+
+@include tablet {
+    #burger:checked ~ #nav_menu {
+        display: block;
+        width: 100%;
+    }
+    nav > label > div.burger_box {
+        display: inline-block;
+    }
+    /* 將checkbox隱藏 */
+}
+#burger {
+    display: none;
+    opacity: 0;
+}

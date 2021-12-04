@@ -1,95 +1,78 @@
 /* 前導 */
-div.adoption_desciption_box {
+.adoption_desciption_box {
     display: flex;
-    /* border:1px solid red; */
     text-align: center;
     line-height: 50px;
     margin-top: 50px;
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    div.adoption_desciption_box {
+    @include tablet {
         padding: 10px;
         width: 100%;
-        max-width: 992px;
     }
-}
-@media screen and (min-width: 576px) and (max-width: 767px) {
-    div.adoption_desciption_box {
-        padding: 10px;
-        width: 100%;
-        max-width: 767px;
+    .adoption_desciption {
+        img {
+            max-width: 600px;
+        }
     }
-}
-@media screen and (max-width: 575px) {
-    div.adoption_desciption_box {
-        padding: 10px;
-        width: 100%;
-        max-width: 575px;
-    }
-}
-div.adoption_desciption_box > div.adoption_desciption > img {
-    max-width: 600px;
-}
-/* 如何領養? */
-div.adoptstep_box {
-    /* border: 1px solid red; */
-    display: flex;
-    /* background-color: rgba(235, 226, 152,.2); */
 }
 
-div.adoption_box > div.adoption_notice > h3 {
-    margin: 50px 0px;
-    text-align: center;
+/*如何領養?*/
+.adoptstep_box {
+    .adoptStep_box_content {
+        padding-top: 50px;
+    }
+    h3 {
+        padding: 20px 0px;
+        text-align: center;
+    }
 }
 
-div.adoptstep_box > div.adoptStep_box_content {
-    /* border: 1px solid blue; */
-    padding-top: 50px;
-}
-div.adoptstep_box > div.adoptStep_box_content > h3 {
-    margin: 20px 0px;
-    text-align: center;
-}
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box {
-    /* border: 1px solid red; */
+.adopt_item_box {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
     position: relative;
-}
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item_01 {
-    /* border:1px solid red; */
-    position: absolute;
-    left: 20%;
-}
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item_02 {
-    /* border:1px solid red; */
-    position: absolute;
-    right: 20%;
-}
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item_03 {
-    /* border:1px solid red; */
-    position: absolute;
-    left: 20%;
-}
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item_04 {
-    /* border:1px solid red; */
-    position: absolute;
-    right: 20%;
-}
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item_05 {
-    /* border:1px solid red; */
-    position: absolute;
-    left: 20%;
-}
-
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item {
-    /* border: 1px solid blue; */
-    display: flex;
-    width: 100%;
-    max-width: 1000px;
-    padding: 10px;
-    position: relative;
+    .adopt_item_01 {
+        position: absolute;
+        left: 20%;
+        @include tablet {
+            left: 0%;
+        }
+    }
+    .adopt_item_02 {
+        position: absolute;
+        right: 20%;
+        @include tablet {
+            right: 0%;
+        }
+    }
+    .adopt_item_03 {
+        position: absolute;
+        left: 20%;
+        @include tablet {
+            left: 0%;
+        }
+    }
+    .adopt_item_04 {
+        position: absolute;
+        right: 20%;
+        @include tablet {
+            right: 0%;
+        }
+    }
+    .adopt_item_05 {
+        position: absolute;
+        left: 20%;
+        @include tablet {
+            left: 0%;
+        }
+    }
+    .adopt_item {
+        display: flex;
+        width: 100%;
+        max-width: 1000px;
+        padding: 10px;
+        position: relative;
+    }
 }
 
 @keyframes adopt {
@@ -105,7 +88,6 @@ div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_i
     40% {
         transform: rotate(1deg);
     }
-
     50% {
         transform: rotate(0deg);
     }
@@ -129,95 +111,98 @@ div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_i
     }
 }
 
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item > img {
-    width: 100%;
-    border-radius: 30px;
-    padding: 10px;
-    /* animation-name: adopt; */
-    animation-delay: 1s;
-    animation-duration: 1s;
-    animation-direction: alternate;
-
-    /* animation-direction: reverse; */
-    animation-iteration-count: infinite;
-    /* border: 1px solid red; */
+.adopt_item {
+    img {
+        opacity: 0.7;
+        width: 70%;
+        border-radius: 30px;
+        padding: 10px;
+        /* animation-name: adopt; */
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        /* animation-direction: reverse; */
+        animation-iteration-count: infinite;
+        @include tablet {
+            // border: 1px solid red;
+            width: 90%;
+            padding: 0px;
+            opacity: 0.5;
+        }
+    }
+    .adopt_txt {
+        width: 65%;
+        height: 180px;
+        padding: 10px;
+        position: absolute;
+        left: 17.5%;
+        bottom: 5%;
+        background-color: rgba(252, 252, 252, 0.7);
+        border-radius: 20px;
+        animation-name: adopt;
+        animation-delay: 1s;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        @include tablet {
+            // border: 1px solid red;
+            width: 80%;
+            height: 90%;
+            left: 10%;
+            top: 5%;
+            animation: none;
+        }
+    }
 }
-div.adoptstep_box > div.adoptStep_box_content > div.adopt_item_box > div.adopt_item > div.adopt_txt {
-    /* border: 1px solid blue; */
-    width: 100%;
-    height: 180px;
-    padding: 5px 40px;
-    position: absolute;
-    bottom: 5%;
-    /* left:60%; */
-    background-color: rgba(252, 252, 252, 0.7);
-    border-radius: 20px;
-    animation-name: adopt;
-    animation-delay: 1s;
-    animation-duration: 3s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
 
-div.adoption_box {
-    /* border: 1px solid rgb(125, 175, 9); */
+/* 認養須知概述*/
+
+.adoption_box {
     display: flex;
     justify-content: center;
-    /* max-width: 1200px; */
-    padding-bottom: 500px;
-    /* background-color: rgb(151 157 206 / 30%); */
+    padding-bottom: 100px;
     padding-top: 50px;
-}
-div.adoption_box > div.adoption_notice {
-    /* border: 1px solid blue; */
-    line-height: 30px;
-    /* margin: 30px 0px; */
-    display: inline-block;
-    position: relative;
-}
-div.adoption_box > div.adoption_notice > div.adopt_need_to_know {
-    /* border: 1px solid rgb(10, 168, 71); */
-    position: absolute;
-    top: 80%;
-    right: 80%;
-    width: 100%;
-    background-color: rgba(252, 252, 252, 0.7);
-}
-div.adoption_box > div.adoption_notice > div.need_to_provide {
-    /* border: 1px solid rgb(245, 149, 6); */
-    position: absolute;
-    width: 100%;
-    top: 45%;
-    left: 80%;
-    background-color: rgba(252, 252, 252, 0.7);
-}
-div.adoption_box > div.adoption_notice > div.adoption_notice_content {
-    /* border: 1px solid rgb(224, 12, 125); */
-    max-width: 800px;
-    border-radius: 20px;
-    width: 100%;
-    padding: 10px;
+    .adoption_notice {
+        line-height: 30px;
+        display: inline-block;
+        position: relative;
+        h3 {
+            margin: 50px 0px;
+            text-align: center;
+        }
+    }
 }
 
-div.adoption_box > div.adoption_notice > div.adoption_notice_content > ul {
-    /* border: 1px solid blue; */
-    position: relative;
-}
-div.adoption_box > div.adoption_notice > div.adoption_notice_content > ul > li {
-    /* border:1px solid red; */
-    display: flex;
-    align-items: center;
-}
+.adoption_notice {
+    .adopt_need_to_know {
+        width: 100%;
+        background-color: rgba(252, 252, 252, 0.7);
+    }
+    .need_to_provide {
+        width: 100%;
+    }
+    .adoption_notice_content {
+        width: 100%;
+        padding: 10px;
+        ul {
+            li {
+                position: relative;
 
-div.adoption_box > div.adoption_notice > div.adoption_notice_content > ul > li::before {
-    content: '';
-    background-image: url(../assets/images/svg/paw.svg);
-    background-repeat: no-repeat;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    left: 10px;
-    /* border: 1px solid red; */
+                display: flex;
+                align-items: center;
+                &::before {
+                    content: '';
+                    background-image: url(~@/assets/images/svg/paw.svg);
+                    background-repeat: no-repeat;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    top: 7px;
+                    left: -23px;
+                }
+            }
+        }
+    }
 }
 
 /* . */
@@ -392,7 +377,7 @@ div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionC
 div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > ul > li::before {
     /* border:1px solid green; */
     content: '';
-    background-image: url(../assets/images/svg/paw.svg);
+    background-image: url(~@/assets/images/svg/paw.svg);
     background-repeat: no-repeat;
     width: 15px;
     height: 15px;

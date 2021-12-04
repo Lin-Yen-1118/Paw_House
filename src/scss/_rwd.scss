@@ -1,0 +1,29 @@
+// RWD分界
+@mixin LS {
+    @media (max-width: 2560px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin const {
+    @media (min-width: 992px) {
+        @content;
+    }
+}

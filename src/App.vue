@@ -24,7 +24,6 @@ export default {
     methods: {},
 }
 </script>
-
 <style lang="scss">
-@import '@/scss/common.scss';
+@import '@/scss/main.scss';
 </style>
