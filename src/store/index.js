@@ -1,17 +1,17 @@
 import Vue from 'vue'
-import Vuex from 'vuex';
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     productList: []
   },
   getters: {
-    getProductList: state => {
+    getProductList(state) {
       return state.productList
     },
-    getProductLength: state => {
+    getProductLength(state) {
       return state.productList.length
     }
   },
@@ -23,13 +23,9 @@ export default new Vuex.Store({
       state.productList.forEach((products, index) => {
         if (products.Id === id) {
           state.productList.splice(index, 1)
-          return
         }
       })
-    },
-
+    }
   },
-  actions: {
-
-  }
-});
+  actions: {}
+})

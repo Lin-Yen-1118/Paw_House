@@ -1,123 +1,130 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "homePage",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/index.vue"),
+    path: '/',
+    name: 'homePage',
+    component: () => import(/* webpackChunkName: "about" */ '../views/index.vue')
   },
   {
-    path: "/aboutUs",
-    name: "aboutUs",
+    path: '/aboutUs',
+    name: 'aboutUs',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/aboutUs.vue"),
+    component: () => import(/* webpackChunkName: "about" */ '../views/aboutUs.vue')
   },
   {
-    path: "/adopt_main",
-    name: "adopt_main",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/adopt_main.vue"),
+    path: '/adopt_main',
+    name: 'adopt_main',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/adopt_main.vue')
   },
 
   {
-    path: "/adopt_dog",
-    name: "dogs",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
+    path: '/adopt_dog',
+    name: 'dogs',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/adopt_animals.vue')
   },
 
   {
-    path: "/adopt_cat",
-    name: "cats",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
+    path: '/adopt_cat',
+    name: 'cats',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/adopt_animals.vue')
   },
   {
-    path: "/adopt_rabbit",
-    name: "rabbits",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
+    path: '/adopt_rabbit',
+    name: 'rabbits',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/adopt_animals.vue')
   },
 
   {
-    path: "/adopt_rodent",
-    name: "rodents",
+    path: '/adopt_rodent',
+    name: 'rodents',
     redirect: { name: 'guineapigs' },
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/adopt_rodent.vue"),
+    component: () => import(/* webpackChunkName: "backend" */ '../views/adopt_rodent.vue'),
     children: [
       {
-        path: "/adopt_guineapigs",
-        name: "guineapigs",
-        component: () =>
-          import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
+        path: '/adopt_guineapigs',
+        name: 'guineapigs',
+        component: () => import(/* webpackChunkName: "backend" */ '../views/adopt_animals.vue')
       },
       {
-        path: "/adopt_hamsters",
-        name: "hamsters",
-        component: () =>
-          import(/* webpackChunkName: "backend" */ "../views/adopt_animals.vue"),
+        path: '/adopt_hamsters',
+        name: 'hamsters',
+        component: () => import(/* webpackChunkName: "backend" */ '../views/adopt_animals.vue')
+      }
+    ]
+  },
+
+  {
+    path: '/room',
+    name: 'room',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/room.vue')
+  },
+
+  // {
+  //   path: "/room_detail",
+  //   name: "room_detail",
+  //   component: () =>
+  //     import(/* webpackChunkName: "backend" */ "../views/room_detail.vue"),
+  // },
+
+  {
+    path: '/room_detail',
+    name: 'room_detail',
+    redirect: { name: 'room_detail' },
+    component: () => import(/* webpackChunkName: "backend" */ '../views/room_detail.vue'),
+    children: [
+      {
+        path: '/small_room',
+        name: 'small_room',
+        component: () => import(/* webpackChunkName: "backend" */ '../views/room.vue')
       },
-    ],
+      {
+        path: '/large_room',
+        name: 'large_room',
+        component: () => import(/* webpackChunkName: "backend" */ '../views/room.vue')
+      },
+      {
+        path: '/luxury_room',
+        name: 'luxury_room',
+        component: () => import(/* webpackChunkName: "backend" */ '../views/room.vue')
+      }
+    ]
   },
 
   {
-    path: "/room",
-    name: "room",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/room.vue"),
-
-  },
-
-  {
-    path: "/room_detail",
-    name: "room_detail",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/room_detail.vue"),
-  },
-
-  {
-    path: "/pet_accommodation",
-    name: "pet_accommodation",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/pet_accommodation.vue"),
+    path: '/pet_accommodation',
+    name: 'pet_accommodation',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/pet_accommodation.vue')
   },
   {
-    path: "/cart",
-    name: "cart",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/cart.vue"),
+    path: '/cart',
+    name: 'cart',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/cart.vue')
   },
   {
-    path: "/user",
-    name: "user",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/user.vue"),
+    path: '/user',
+    name: 'user',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/user.vue')
   },
   {
-    path: "/products",
-    name: "products",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/product.vue"),
+    path: '/products',
+    name: 'products',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/product.vue')
   },
   {
-    path: "/item",
-    name: "item",
-    component: () =>
-      import(/* webpackChunkName: "backend" */ "../views/item.vue"),
-  },
-
-];
+    path: '/item',
+    name: 'item',
+    component: () => import(/* webpackChunkName: "backend" */ '../views/item.vue')
+  }
+]
 
 const router = new VueRouter({
-  routes,
-});
+  routes
+})
 
-export default router;
+export default router

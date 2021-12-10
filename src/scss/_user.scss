@@ -1,180 +1,207 @@
 /* 清晰背景圖 */
 div.backgroung_cover {
-    background-image: url(~@/assets/images/bg/user_bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(~@/assets/images/bg/user_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    width: 100%;
-    height: 100%;
-    min-height: 1000px;
-    background-position: center center;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 1000px;
+  background-position: center center;
+  object-fit: cover;
 }
 /* 登入會員 */
 div.backgroung_cover > div.user_box {
-    /* border: 1px solid red; */
-    display: flex;
+  /* border: 1px solid red; */
+  display: flex;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.backgroung_cover > div.user_box {
-        padding: 20px;
-    }
+  div.backgroung_cover > div.user_box {
+    padding: 20px;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.backgroung_cover > div.user_box {
-        padding: 20px;
-    }
+  div.backgroung_cover > div.user_box {
+    padding: 20px;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.backgroung_cover > div.user_box {
-        padding: 20px;
-    }
+  div.backgroung_cover > div.user_box {
+    padding: 20px;
+  }
 }
 
 div.backgroung_cover > div.user_box > div.user_logIn {
-    display: flex;
-    /* border: 1px solid blue; */
-    margin-top: 200px;
+  display: flex;
+  /* border: 1px solid blue; */
+  margin-top: 200px;
 }
 /* 註冊會員 */
 div.backgroung_cover > div.user_box > div.user_signIn {
-    display: flex;
-    /* border: 1px solid blue; */
-    margin-top: 200px;
+  display: flex;
+  /* border: 1px solid blue; */
+  margin-top: 200px;
 }
 div.backgroung_cover > div.user_box > div.user {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    border-color: transparent;
-    border-radius: 30px;
-    padding: 20px;
-    background-color: rgba(255, 242, 220, 0.3);
-    width: 100%;
-    max-width: 400px;
-    /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-color: transparent;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: rgba(255, 242, 220, 0.3);
+  width: 100%;
+  max-width: 400px;
+  /* border: 1px solid red; */
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.backgroung_cover > div.user_box > div.user {
-        width: 100%;
-    }
+  div.backgroung_cover > div.user_box > div.user {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.backgroung_cover > div.user_box > div.user {
-        width: 100%;
-    }
+  div.backgroung_cover > div.user_box > div.user {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.backgroung_cover > div.user_box > div.user {
-        width: 100%;
-    }
+  div.backgroung_cover > div.user_box > div.user {
+    width: 100%;
+  }
 }
 
 div.backgroung_cover > div.user_box > div.user > div.user_form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 div.backgroung_cover > div.user_box > div.user > div.user_title {
-    font-size: 24px;
+  font-size: 24px;
 }
 div.backgroung_cover > div.user_box > div.user > div.user_form {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 div.backgroung_cover > div.user_box > div.user > div.user_form > form > input.user_form_input {
-    padding: 10px;
-    border-radius: 10px;
-    margin: 10px 0px;
-    max-width: 600px;
-    width: 100%;
-    border-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  max-width: 600px;
+  width: 100%;
+  border-color: transparent;
 }
 
 /* 外部連結區塊 */
 
-div.backgroung_cover > div.user_box > div.user > div.user_external_connection_box > div.user_external_connection {
-    display: block;
-    height: 30px;
-    font-size: 20px;
-    /* border: 1px solid red; */
+div.backgroung_cover
+  > div.user_box
+  > div.user
+  > div.user_external_connection_box
+  > div.user_external_connection {
+  display: block;
+  height: 30px;
+  font-size: 20px;
+  /* border: 1px solid red; */
 }
 
-div.backgroung_cover > div.user_box > div.user > div.user_external_connection_box > div.user_social_meadia_icons {
-    /* border: 1px solid rgb(35, 150, 33); */
-    display: flex;
-    justify-content: center;
-    margin: 5px 0px;
+div.backgroung_cover
+  > div.user_box
+  > div.user
+  > div.user_external_connection_box
+  > div.user_social_meadia_icons {
+  /* border: 1px solid rgb(35, 150, 33); */
+  display: flex;
+  justify-content: center;
+  margin: 5px 0px;
 }
 
-div.backgroung_cover > div.user_box > div.user > div.user_external_connection_box > div.user_social_meadia_icons > div.social_meadia_icons_item > a > img {
-    width: 30px;
-    margin: 5px;
+div.backgroung_cover
+  > div.user_box
+  > div.user
+  > div.user_external_connection_box
+  > div.user_social_meadia_icons
+  > div.social_meadia_icons_item
+  > a
+  > img {
+  width: 30px;
+  margin: 5px;
 }
-div.backgroung_cover > div.user_box > div.user > div.user_external_connection_box > div.user_social_meadia_icons > div.social_meadia_icons_item > a :hover {
-    /* border: 2px solid blue; */
-    padding: 1.5px;
+div.backgroung_cover
+  > div.user_box
+  > div.user
+  > div.user_external_connection_box
+  > div.user_social_meadia_icons
+  > div.social_meadia_icons_item
+  > a
+  :hover {
+  /* border: 2px solid blue; */
+  padding: 1.5px;
 }
 
 /*滑鼠移入顯示效果*/
-div.backgroung_cover > div.user_box > div.user > div.user_form > form > input.user_form_input_bottom:hover {
-    background-color: #4b1001;
-    color: #ffffff;
+div.backgroung_cover
+  > div.user_box
+  > div.user
+  > div.user_form
+  > form
+  > input.user_form_input_bottom:hover {
+  background-color: #4b1001;
+  color: #ffffff;
 }
 /*登入-設定按鈕樣式*/
 input.user_form_input_bottom,
 div.user_signin_box > div.user_signin_bottom_box > input.user_signin_bottom {
-    border-radius: 25px;
-    border-color: transparent;
-    color: #ffffff;
-    background-color: #a63316;
-    font-size: 20px;
-    max-width: 200px;
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    transition: all 0.1s linear;
+  border-radius: 25px;
+  border-color: transparent;
+  color: #ffffff;
+  background-color: #a63316;
+  font-size: 20px;
+  max-width: 200px;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  transition: all 0.1s linear;
 }
 
 /*註冊-設定按鈕樣式*/
 input.user_form_input_bottom,
 div.user_signin_box > div.user_signin_bottom_box > input.user_signin_bottom {
-    border-radius: 25px;
-    border-color: transparent;
-    color: #ffffff;
-    background-color: #a63316;
-    font-size: 20px;
-    max-width: 200px;
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    transition: all 0.1s linear;
+  border-radius: 25px;
+  border-color: transparent;
+  color: #ffffff;
+  background-color: #a63316;
+  font-size: 20px;
+  max-width: 200px;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  transition: all 0.1s linear;
 }
 
 /*註冊-滑鼠移入顯示效果*/
 div.user_signin_box > div.user_signin_bottom_box > input.user_signin_bottom:hover {
-    background-color: #4b1001;
-    color: #ffffff;
+  background-color: #4b1001;
+  color: #ffffff;
 }
 
 div.user > div.user_signin_icons_box > div > img {
-    /* border:1px solid red; */
-    width: 30px;
+  /* border:1px solid red; */
+  width: 30px;
 }
 
 div.backgroung_cover > div.user_box > div.user > div.user_signin_box {
-    /* border: 2px solid rgb(9, 134, 105); */
-    width: 100%;
-    height: 100px;
+  /* border: 2px solid rgb(9, 134, 105); */
+  width: 100%;
+  height: 100px;
 }
 
 div.backgroung_cover > div.user_box > div.user > div.user_signin_box > .user_signin_text {
-    /* border: 1px solid red; */
-    margin: 10px 0px;
+  /* border: 1px solid red; */
+  margin: 10px 0px;
 }
 
 div.footer {
-    margin-top: 0px;
+  margin-top: 0px;
 }

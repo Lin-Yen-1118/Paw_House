@@ -1,121 +1,121 @@
 <template>
-    <div id="adopt">
-        <!-- 認養須知 -->
-        <div class="adopt_pics">
-            <!-- <img id="adopt" src="./img/adopt/animals.jpg"> -->
-            <!-- <img id="adopt" src="./img/adopt/pets-01.jpg"> -->
-        </div>
-        <!-- 前導 -->
-        <div class="adoption_desciption_box">
-            <div class="adoption_desciption">
-                <!-- <img src="./img/adopt/animals02.jpg"> -->
-                <img src="../assets/images/svg/animals.svg" />
-                <h2>認養須知</h2>
-                <p>浪，原是一條坎坷路，直到遇見你後，成為浪漫長路......</p>
+  <div id="adopt">
+    <!-- 認養須知 -->
+    <div class="adopt_pics">
+      <!-- <img id="adopt" src="./img/adopt/animals.jpg"> -->
+      <!-- <img id="adopt" src="./img/adopt/pets-01.jpg"> -->
+    </div>
+    <!-- 前導 -->
+    <div class="adoption_desciption_box">
+      <div class="adoption_desciption">
+        <!-- <img src="./img/adopt/animals02.jpg"> -->
+        <img src="../assets/images/svg/animals.svg" />
+        <h2>認養須知</h2>
+        <p>浪，原是一條坎坷路，直到遇見你後，成為浪漫長路......</p>
 
-                <p>生命中有毛孩相伴，是一件幸福的事。</p>
+        <p>生命中有毛孩相伴，是一件幸福的事。</p>
 
-                <p>牠們無私而純潔，毛小孩的眼中，只有一個唯一，那便是你。</p>
+        <p>牠們無私而純潔，毛小孩的眼中，只有一個唯一，那便是你。</p>
 
-                <p>盼望來到這裡，尋找生命中的註定。</p>
+        <p>盼望來到這裡，尋找生命中的註定。</p>
+      </div>
+    </div>
+    <!-- 如何領養? -->
+
+    <div class="adoptstep_box">
+      <div class="adoptStep_box_content">
+        <h3>如何領養</h3>
+
+        <div class="adopt_item_box">
+          <div class="adopt_item adopt_item_01">
+            <img src="../assets/images/bg/06.jpg" alt="" title />
+            <div class="adopt_txt">
+              <h4>STEP.1 &nbsp;找毛孩</h4>
+              <p>尋找想互動毛孩</p>
             </div>
-        </div>
-        <!-- 如何領養? -->
+          </div>
 
-        <div class="adoptstep_box">
-            <div class="adoptStep_box_content">
-                <h3>如何領養</h3>
-
-                <div class="adopt_item_box">
-                    <div class="adopt_item adopt_item_01">
-                        <img src="../assets/images/bg/06.jpg" alt="" title />
-                        <div class="adopt_txt">
-                            <h4>STEP.1 &nbsp;找毛孩</h4>
-                            <p>尋找想互動毛孩</p>
-                        </div>
-                    </div>
-
-                    <div class="adopt_item adopt_item_02">
-                        <img src="../assets/images/bg/14.jpg" alt="" title />
-                        <div class="adopt_txt">
-                            <h4>STEP.2 &nbsp;預約</h4>
-                            <p>填寫預約互動表單</p>
-                        </div>
-                    </div>
-
-                    <div class="adopt_item adopt_item_03">
-                        <img src="../assets/images/bg/15.jpg" alt="" title />
-                        <div class="adopt_txt">
-                            <h4>STEP.3 &nbsp;等待聯繫</h4>
-                            <p>我們收到預約單後會盡速與您連絡確認</p>
-                        </div>
-                    </div>
-
-                    <div class="adopt_item adopt_item_04">
-                        <img src="../assets/images/bg/13.jpg" alt="" title />
-                        <div class="adopt_txt">
-                            <h4>STEP.4&nbsp;現場互動</h4>
-                            <p>
-                                現場互動後確定認養意願，如有意願且為適合領養者，可申請於本館與領養毛孩一同住宿體驗有彼此的生活，或是直接辦理領養手續
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="adopt_item adopt_item_05">
-                        <img src="../assets/images/bg/10.jpg" alt="" title />
-                        <div class="adopt_txt">
-                            <h4>STEP.5&nbsp;回家</h4>
-                            <p>
-                                謝謝你給毛孩一個家，本館將於領養後持續與您保持聯繫，關心毛孩狀況
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <div class="adopt_item adopt_item_02">
+            <img src="../assets/images/bg/14.jpg" alt="" title />
+            <div class="adopt_txt">
+              <h4>STEP.2 &nbsp;預約</h4>
+              <p>填寫預約互動表單</p>
             </div>
-        </div>
+          </div>
 
-        <!-- 認養須知概述 -->
-        <div class="adoption_box">
-            <div class="adoption_notice">
-                <h3>其他注意事項</h3>
-
-                <div class="adoption_notice_content adopt_need_to_know">
-                    <h4>請詳細閱讀以下認養須知：</h4>
-                    <ul class="adoptionBox">
-                        <li>須年滿25歲並取得共同居住者同意</li>
-                        <li>在外租屋者需徵求房東同意</li>
-                        <li>須有穩定收入</li>
-                        <li>犬、貓須配合結紮、植入晶片及寵物登記</li>
-                        <li>犬、貓每年需施打預防針並於每月體內、體外除蟲</li>
-                        <li>不得24小時綁繩或關籠</li>
-                        <li>須有正確飼養知識</li>
-                        <li>須備有緊急醫療預備金</li>
-                        <li>須簽認養切結書並願意配合後續追蹤</li>
-                    </ul>
-                </div>
-                <div class="adoption_notice_content need_to_provide">
-                    <h4>確認領養前須提供給館方訊息:</h4>
-                    <ul class="adoptionBox">
-                        <li>生活環境</li>
-                        <li>是否有飼養經驗</li>
-                        <li>飼養方式</li>
-                    </ul>
-                </div>
-                <!-- <img src="../assets/images/bg/19.jpg" /> -->
+          <div class="adopt_item adopt_item_03">
+            <img src="../assets/images/bg/15.jpg" alt="" title />
+            <div class="adopt_txt">
+              <h4>STEP.3 &nbsp;等待聯繫</h4>
+              <p>我們收到預約單後會盡速與您連絡確認</p>
             </div>
+          </div>
+
+          <div class="adopt_item adopt_item_04">
+            <img src="../assets/images/bg/13.jpg" alt="" title />
+            <div class="adopt_txt">
+              <h4>STEP.4&nbsp;現場互動</h4>
+              <p>
+                現場互動後確定認養意願，如有意願且為適合領養者，可申請於本館與領養毛孩一同住宿體驗有彼此的生活，或是直接辦理領養手續
+              </p>
+            </div>
+          </div>
+
+          <div class="adopt_item adopt_item_05">
+            <img src="../assets/images/bg/10.jpg" alt="" title />
+            <div class="adopt_txt">
+              <h4>STEP.5&nbsp;回家</h4>
+              <p>
+                謝謝你給毛孩一個家，本館將於領養後持續與您保持聯繫，關心毛孩狀況
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- ...... -->
-        <!-- ...... -->
-        <!-- ...... -->
+    <!-- 認養須知概述 -->
+    <div class="adoption_box">
+      <div class="adoption_notice">
+        <h3>其他注意事項</h3>
 
-        <!-- 養寵物需有基本條件及知識 -->
-        <!-- <div class="basic_knowledge">
+        <div class="adoption_notice_content adopt_need_to_know">
+          <h4>請詳細閱讀以下認養須知：</h4>
+          <ul class="adoptionBox">
+            <li>須年滿25歲並取得共同居住者同意</li>
+            <li>在外租屋者需徵求房東同意</li>
+            <li>須有穩定收入</li>
+            <li>犬、貓須配合結紮、植入晶片及寵物登記</li>
+            <li>犬、貓每年需施打預防針並於每月體內、體外除蟲</li>
+            <li>不得24小時綁繩或關籠</li>
+            <li>須有正確飼養知識</li>
+            <li>須備有緊急醫療預備金</li>
+            <li>須簽認養切結書並願意配合後續追蹤</li>
+          </ul>
+        </div>
+        <div class="adoption_notice_content need_to_provide">
+          <h4>確認領養前須提供給館方訊息:</h4>
+          <ul class="adoptionBox">
+            <li>生活環境</li>
+            <li>是否有飼養經驗</li>
+            <li>飼養方式</li>
+          </ul>
+        </div>
+        <!-- <img src="../assets/images/bg/19.jpg" /> -->
+      </div>
+    </div>
+
+    <!-- ...... -->
+    <!-- ...... -->
+    <!-- ...... -->
+
+    <!-- 養寵物需有基本條件及知識 -->
+    <!-- <div class="basic_knowledge">
       <div class="basic_knowledge_title">
         <h4>毛孩基本小知識:</h4>
       </div> -->
-        <!-- 小圖示 -->
-        <!-- <div class="picture_target">
+    <!-- 小圖示 -->
+    <!-- <div class="picture_target">
         <div class="picture_target_item_box">
           <div class="picture_target_item">
             <a href="#feed_dog"><img src="../assets/images/dog/01.jpg" /></a>
@@ -340,13 +340,15 @@
         </div>
       </div>
     </div> -->
-    </div>
+  </div>
 </template>
+
 <script>
 export default {
-    name: 'adopt_main',
+  name: 'AdoptMain'
 }
 </script>
+
 <style lang="scss" scoped>
 @import '@/scss/main.scss';
 </style>

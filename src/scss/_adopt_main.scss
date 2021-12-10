@@ -1,208 +1,208 @@
 /* 前導 */
 .adoption_desciption_box {
-    display: flex;
-    text-align: center;
-    line-height: 50px;
-    margin-top: 50px;
-    @include tablet {
-        padding: 10px;
-        width: 100%;
+  display: flex;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 50px;
+  @include tablet {
+    padding: 10px;
+    width: 100%;
+  }
+  .adoption_desciption {
+    img {
+      max-width: 600px;
     }
-    .adoption_desciption {
-        img {
-            max-width: 600px;
-        }
-    }
+  }
 }
 
 /*如何領養?*/
 .adoptstep_box {
-    .adoptStep_box_content {
-        padding-top: 50px;
-    }
-    h3 {
-        padding: 20px 0px;
-        text-align: center;
-    }
+  .adoptStep_box_content {
+    padding-top: 50px;
+  }
+  h3 {
+    padding: 20px 0px;
+    text-align: center;
+  }
 }
 
 .adopt_item_box {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  position: relative;
+  .adopt_item_01 {
+    position: absolute;
+    left: 20%;
+    @include tablet {
+      left: 0%;
+    }
+  }
+  .adopt_item_02 {
+    position: absolute;
+    right: 20%;
+    @include tablet {
+      right: 0%;
+    }
+  }
+  .adopt_item_03 {
+    position: absolute;
+    left: 20%;
+    @include tablet {
+      left: 0%;
+    }
+  }
+  .adopt_item_04 {
+    position: absolute;
+    right: 20%;
+    @include tablet {
+      right: 0%;
+    }
+  }
+  .adopt_item_05 {
+    position: absolute;
+    left: 20%;
+    @include tablet {
+      left: 0%;
+    }
+  }
+  .adopt_item {
     display: flex;
-    flex-direction: column;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 10px;
     position: relative;
-    .adopt_item_01 {
-        position: absolute;
-        left: 20%;
-        @include tablet {
-            left: 0%;
-        }
-    }
-    .adopt_item_02 {
-        position: absolute;
-        right: 20%;
-        @include tablet {
-            right: 0%;
-        }
-    }
-    .adopt_item_03 {
-        position: absolute;
-        left: 20%;
-        @include tablet {
-            left: 0%;
-        }
-    }
-    .adopt_item_04 {
-        position: absolute;
-        right: 20%;
-        @include tablet {
-            right: 0%;
-        }
-    }
-    .adopt_item_05 {
-        position: absolute;
-        left: 20%;
-        @include tablet {
-            left: 0%;
-        }
-    }
-    .adopt_item {
-        display: flex;
-        width: 100%;
-        max-width: 1000px;
-        padding: 10px;
-        position: relative;
-    }
+  }
 }
 
 @keyframes adopt {
-    10% {
-        transform: rotate(0deg);
-    }
-    20% {
-        transform: rotate(1deg);
-    }
-    30% {
-        transform: rotate(-1deg);
-    }
-    40% {
-        transform: rotate(1deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(1deg);
-    }
-    50% {
-        transform: rotate(-1deg);
-    }
-    40% {
-        transform: rotate(-2deg);
-    }
-    30% {
-        transform: rotate(-1deg);
-    }
-    20% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(1deg);
-    }
+  10% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(1deg);
+  }
+  30% {
+    transform: rotate(-1deg);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  40% {
+    transform: rotate(-2deg);
+  }
+  30% {
+    transform: rotate(-1deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(1deg);
+  }
 }
 
 .adopt_item {
-    img {
-        opacity: 0.7;
-        width: 70%;
-        border-radius: 30px;
-        padding: 10px;
-        /* animation-name: adopt; */
-        animation-delay: 1s;
-        animation-duration: 1s;
-        animation-direction: alternate;
-        /* animation-direction: reverse; */
-        animation-iteration-count: infinite;
-        @include tablet {
-            // border: 1px solid red;
-            width: 90%;
-            padding: 0px;
-            opacity: 0.5;
-        }
+  img {
+    opacity: 0.7;
+    width: 70%;
+    border-radius: 30px;
+    padding: 10px;
+    /* animation-name: adopt; */
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    /* animation-direction: reverse; */
+    animation-iteration-count: infinite;
+    @include tablet {
+      // border: 1px solid red;
+      width: 90%;
+      padding: 0px;
+      opacity: 0.5;
     }
-    .adopt_txt {
-        width: 65%;
-        height: 180px;
-        padding: 10px;
-        position: absolute;
-        left: 17.5%;
-        bottom: 5%;
-        background-color: rgba(252, 252, 252, 0.7);
-        border-radius: 20px;
-        animation-name: adopt;
-        animation-delay: 1s;
-        animation-duration: 3s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        @include tablet {
-            // border: 1px solid red;
-            width: 80%;
-            height: 90%;
-            left: 10%;
-            top: 5%;
-            animation: none;
-        }
+  }
+  .adopt_txt {
+    width: 65%;
+    height: 180px;
+    padding: 10px;
+    position: absolute;
+    left: 17.5%;
+    bottom: 5%;
+    background-color: rgba(252, 252, 252, 0.7);
+    border-radius: 20px;
+    animation-name: adopt;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    @include tablet {
+      // border: 1px solid red;
+      width: 80%;
+      height: 90%;
+      left: 10%;
+      top: 5%;
+      animation: none;
     }
+  }
 }
 
 /* 認養須知概述*/
 
 .adoption_box {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 100px;
-    padding-top: 50px;
-    .adoption_notice {
-        line-height: 30px;
-        display: inline-block;
-        position: relative;
-        h3 {
-            margin: 50px 0px;
-            text-align: center;
-        }
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  .adoption_notice {
+    line-height: 30px;
+    display: inline-block;
+    position: relative;
+    h3 {
+      margin: 50px 0px;
+      text-align: center;
     }
+  }
 }
 
 .adoption_notice {
-    .adopt_need_to_know {
-        width: 100%;
-        background-color: rgba(252, 252, 252, 0.7);
-    }
-    .need_to_provide {
-        width: 100%;
-    }
-    .adoption_notice_content {
-        width: 100%;
-        padding: 10px;
-        ul {
-            li {
-                position: relative;
+  .adopt_need_to_know {
+    width: 100%;
+    background-color: rgba(252, 252, 252, 0.7);
+  }
+  .need_to_provide {
+    width: 100%;
+  }
+  .adoption_notice_content {
+    width: 100%;
+    padding: 10px;
+    ul {
+      li {
+        position: relative;
 
-                display: flex;
-                align-items: center;
-                &::before {
-                    content: '';
-                    background-image: url(~@/assets/images/svg/paw.svg);
-                    background-repeat: no-repeat;
-                    width: 15px;
-                    height: 15px;
-                    position: absolute;
-                    top: 7px;
-                    left: -23px;
-                }
-            }
+        display: flex;
+        align-items: center;
+        &::before {
+          content: '';
+          background-image: url(~@/assets/images/svg/paw.svg);
+          background-repeat: no-repeat;
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          top: 7px;
+          left: -23px;
         }
+      }
     }
+  }
 }
 
 /* . */
@@ -231,159 +231,180 @@ div ~ #tab > div:first-of-type,
 #feed_rabbit:target ~ #tab > div.rabbit_box,
 #feed_guineapig:target ~ #tab > div.guineapig_box,
 #feed_hamster:target ~ #tab > div.hamster_box {
-    border: solid 1px red;
+  border: solid 1px red;
 }
 
 div.basic_knowledge {
-    /* border: 1px solid blue; */
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin-top: 100px;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin-top: 100px;
 }
 div.basic_knowledge > div.basic_knowledge_title {
-    /* border: 1px solid yellow; */
-    display: block;
-    margin: 10px;
-    text-align: center;
+  /* border: 1px solid yellow; */
+  display: block;
+  margin: 10px;
+  text-align: center;
 }
 div.basic_knowledge > div.animalsKnowadgeBox {
-    border: 1px solid red;
-    line-height: 30px;
-    margin: 30px 0px;
-    padding: 20px 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-height: 1150px;
-    max-width: 1000px;
-    overflow: hidden;
-    flex-direction: row;
+  border: 1px solid red;
+  line-height: 30px;
+  margin: 30px 0px;
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 1150px;
+  max-width: 1000px;
+  overflow: hidden;
+  flex-direction: row;
 }
 
 div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox {
-    border: 1px solid #c62020;
-    display: flex;
-    line-height: 30px;
-    padding: 10px;
-    margin: 20px 5px;
-    max-width: 750px;
-    margin-right: 200px;
-    margin-bottom: 1000px;
+  border: 1px solid #c62020;
+  display: flex;
+  line-height: 30px;
+  padding: 10px;
+  margin: 20px 5px;
+  max-width: 750px;
+  margin-right: 200px;
+  margin-bottom: 1000px;
 }
 div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox:hover {
-    box-shadow: 2px 2px 2px rgba(231, 231, 238, 0.6), 4px 4px 6px rgba(202, 202, 207, 0.4), 6px 6px 12px rgba(176, 176, 179, 0.4);
-    /* border: 2px solid #575454; */
+  box-shadow: 2px 2px 2px rgba(231, 231, 238, 0.6), 4px 4px 6px rgba(202, 202, 207, 0.4),
+    6px 6px 12px rgba(176, 176, 179, 0.4);
+  /* border: 2px solid #575454; */
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox {
-        display: flex;
-        width: 100%;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox {
+    display: flex;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox {
-        display: flex;
-        width: 100%;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox {
+    display: flex;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox {
-        display: flex;
-        width: 100%;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox {
+    display: flex;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain {
-        display: block;
-        max-width: 500px;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain {
+    display: block;
+    max-width: 500px;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain {
-        display: block;
-        max-width: 500px;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain {
+    display: block;
+    max-width: 500px;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain {
-        display: block;
-        max-width: 500px;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain {
+    display: block;
+    max-width: 500px;
+  }
 }
 div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > div > img {
-    width: 130px;
-    height: 120px;
-    border-radius: 50%;
-    text-align: center;
-    display: flex;
-    margin-bottom: 30px;
+  width: 130px;
+  height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > div > img {
-        /* border:1px solid red; */
-        display: inline-block;
-    }
+  div.basic_knowledge
+    > div.animalsKnowadgeBox
+    > div.conditionBox
+    > div.conditionContain
+    > div
+    > img {
+    /* border:1px solid red; */
+    display: inline-block;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > div > img {
-        display: inline-block;
-    }
+  div.basic_knowledge
+    > div.animalsKnowadgeBox
+    > div.conditionBox
+    > div.conditionContain
+    > div
+    > img {
+    display: inline-block;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > div > img {
-        display: inline-block;
-    }
+  div.basic_knowledge
+    > div.animalsKnowadgeBox
+    > div.conditionBox
+    > div.conditionContain
+    > div
+    > img {
+    display: inline-block;
+  }
 }
 div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > h3 {
-    /* border:1px solid red; */
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  /* border:1px solid red; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > h3 {
-        display: inline-block;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > h3 {
+    display: inline-block;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > h3 {
-        display: inline-block;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > h3 {
+    display: inline-block;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > h3 {
-        display: inline-block;
-    }
+  div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > h3 {
+    display: inline-block;
+  }
 }
 div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > h5 {
-    margin: 10px 0px;
-    border-top: 1px dashed #000000;
-    padding: 10px 0px;
+  margin: 10px 0px;
+  border-top: 1px dashed #000000;
+  padding: 10px 0px;
 }
 div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > ul {
-    /* border:1px solid red; */
-    position: relative;
-    display: block;
+  /* border:1px solid red; */
+  position: relative;
+  display: block;
 }
 div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > ul > li {
-    /* border:1px solid blue; */
-    text-decoration: solid;
-    display: flex;
-    text-align: left;
-    /* align-items: center; */
+  /* border:1px solid blue; */
+  text-decoration: solid;
+  display: flex;
+  text-align: left;
+  /* align-items: center; */
 }
-div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionContain > ul > li::before {
-    /* border:1px solid green; */
-    content: '';
-    background-image: url(~@/assets/images/svg/paw.svg);
-    background-repeat: no-repeat;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    left: 10px;
-    margin: 8px;
+div.basic_knowledge
+  > div.animalsKnowadgeBox
+  > div.conditionBox
+  > div.conditionContain
+  > ul
+  > li::before {
+  /* border:1px solid green; */
+  content: '';
+  background-image: url(~@/assets/images/svg/paw.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 10px;
+  margin: 8px;
 }
 
 /* @media screen and (min-width: 768px) and (max-width: 992px){
@@ -398,43 +419,68 @@ div.basic_knowledge > div.animalsKnowadgeBox > div.conditionBox > div.conditionC
 
 /* 小圖示 */
 div.basic_knowledge > div.picture_target {
-    /* border: 1px solid red; */
-    display: flex;
+  /* border: 1px solid red; */
+  display: flex;
 }
 div.basic_knowledge > div.picture_target > div.picture_target_item_box {
-    display: flex;
-    height: 100px;
+  display: flex;
+  height: 100px;
 }
 div.basic_knowledge > div.picture_target > div.picture_target_item_box > div.picture_target_item {
-    /* border: 1px solid blue; */
-    margin: 12px;
+  /* border: 1px solid blue; */
+  margin: 12px;
 }
 
-div.basic_knowledge > div.picture_target > div.picture_target_item_box > div.picture_target_item > a > img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    /* border: 1px solid yellow; */
+div.basic_knowledge
+  > div.picture_target
+  > div.picture_target_item_box
+  > div.picture_target_item
+  > a
+  > img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  /* border: 1px solid yellow; */
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.basic_knowledge > div.picture_target > div.picture_target_item_box > div.picture_target_item > a > img {
-        width: 60px;
-        height: 60px;
-    }
+  div.basic_knowledge
+    > div.picture_target
+    > div.picture_target_item_box
+    > div.picture_target_item
+    > a
+    > img {
+    width: 60px;
+    height: 60px;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.basic_knowledge > div.picture_target > div.picture_target_item_box > div.picture_target_item > a > img {
-        width: 50px;
-        height: 50px;
-    }
+  div.basic_knowledge
+    > div.picture_target
+    > div.picture_target_item_box
+    > div.picture_target_item
+    > a
+    > img {
+    width: 50px;
+    height: 50px;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.basic_knowledge > div.picture_target > div.picture_target_item_box > div.picture_target_item > a > img {
-        width: 40px;
-        height: 40px;
-    }
+  div.basic_knowledge
+    > div.picture_target
+    > div.picture_target_item_box
+    > div.picture_target_item
+    > a
+    > img {
+    width: 40px;
+    height: 40px;
+  }
 }
-div.basic_knowledge > div.picture_target > div.picture_target_item_box > div.picture_target_item > a > img:hover {
-    width: calc(60px * 1.5);
-    height: calc(60px * 1.5);
+div.basic_knowledge
+  > div.picture_target
+  > div.picture_target_item_box
+  > div.picture_target_item
+  > a
+  > img:hover {
+  width: calc(60px * 1.5);
+  height: calc(60px * 1.5);
 }
