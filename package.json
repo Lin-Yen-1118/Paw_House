@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && node ./deploy/ghpages.js"
   },
   "dependencies": {
     "-": "0.0.1",
@@ -31,8 +32,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^7.5.0",
-    "prettier": "^1.19.1",
     "gh-pages": "^3.2.3",
+    "prettier": "^1.19.1",
     "sass": "^1.37.5",
     "sass-loader": "^10.2.0",
     "vue-template-compiler": "^2.6.11"
