@@ -50,7 +50,10 @@ export default {
   methods: {
     decrease() {
       this.amount -= 1
-      this.amount < 0 ? (this.amount = 0) : 0
+
+      if (this.amount < 0) {
+        this.amount = 0
+      }
     },
 
     increase() {
@@ -62,12 +65,8 @@ export default {
     },
 
     ...mapMutations(['delCartList'])
-  },
+  }
 
-  mounted() {
-    this.amount
-  },
-
-  destroyed() {}
+  // destroyed() {}
 }
 </script>

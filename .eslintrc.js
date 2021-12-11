@@ -64,6 +64,7 @@ module.exports = {
       {
         'invalid-first-character-of-tag-name': false
       }
-    ]
+    ],
+    'global-require': 0
   }
 }

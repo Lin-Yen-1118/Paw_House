@@ -55,13 +55,10 @@ export default {
   methods: {
     decrease() {
       this.amount -= 1
-      this.amount < 0 ? (this.amount = 0) : 0
 
-      // if(this.amount < 0){
-      //    (this.amount = 0)
-      // }else{
-      //   return
-      // }
+      if (this.amount < 0) {
+        this.amount = 0
+      }
     },
 
     increase() {
@@ -75,14 +72,15 @@ export default {
     },
 
     ...mapMutations({
-      add: 'increment' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+      add: 'increment'
     })
-  },
+  }
 
-  mounted() {},
-  destroyed() {}
+  // mounted() {},
+  // destroyed() {}
+
   // computed: {
-  //     // 使用对象展开运算符将 getter 混入 computed 对象中
+  //
   //     ...mapGetters([
   //         'getProductList',
   //         // ...

@@ -20,8 +20,6 @@ export default {
     return {}
   },
 
-  watch: {},
-
   computed: {
     // 使用对象展开运算符将 getter 混入 computed 对象中
     ...mapGetters([
@@ -30,6 +28,7 @@ export default {
     ])
   },
 
+  watch: {},
   mutation: {}
 }
 </script>

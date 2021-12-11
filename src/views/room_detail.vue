@@ -92,8 +92,7 @@ export default {
   name: 'RoomDetail',
   data() {
     return {
-      roomDetailsList: [],
-      isShow: false
+      roomDetailsList: []
     }
   },
 

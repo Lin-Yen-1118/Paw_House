@@ -27,8 +27,7 @@ export default {
 
   data() {
     return {
-      productsList: [],
-      amount: 0,
+      // productsList: [],
       total: 0
     }
   },
