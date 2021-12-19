@@ -93,7 +93,7 @@
           <li>
             <router-link to="/user" class="link_style">
               <span>
-                <!-- <img id="user" src=../assets/images/svg/user-circle-solid.svg//////////> -->
+                <img id="user" src=../assets/images/svg/user-circle-solid.svg />
               </span>
             </router-link>
           </li>

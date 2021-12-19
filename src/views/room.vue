@@ -16,8 +16,6 @@
                 title=""
               />
             </router-link>
-            <!-- <router-link to="/room_detail"> <img class="rooms_pic" :src="require(`../assets/images/${$route.name}/${item.imgUrl}`)" alt="房型照片" title="" /> </router-link>
-                        <router-view /> -->
           </div>
 
           <div class="room_overview">
@@ -133,6 +131,7 @@ export default {
   mounted() {
     const roomType = this.$route.name
     this.getRoomList(roomType)
+    console.log(roomType)
   },
 
   methods: {
@@ -141,6 +140,8 @@ export default {
         const roomList = res.data[roomType]
         this.roomList = roomList
       })
+      console.log(roomType)
+      console.log(this.roomList)
     }
   }
 }

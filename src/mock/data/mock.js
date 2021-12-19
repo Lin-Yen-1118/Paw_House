@@ -1,6 +1,8 @@
+import address from '@/json/address.json'
+
 const axios = require('axios')
 const MockAdapter = require('axios-mock-adapter')
-// import address from '@/json/address.json'
+
 // This sets the mock adapter on the default instance
 const mock = new MockAdapter(axios)
 
@@ -1149,7 +1151,8 @@ mock.onGet(`${process.env.VUE_APP_BASE_URL}/products`).reply(200, {
     // },
   ]
 })
-// mock.onGet(`${process.env.VUE_APP_BASE_URL}/address`).reply(200, address);
+mock.onGet(`${process.env.VUE_APP_BASE_URL}/address`).reply(200, address)
+
 mock.onGet(`${process.env.VUE_APP_BASE_URL}/room`).reply(200, {
   room: [
     {
@@ -1176,6 +1179,7 @@ mock.onGet(`${process.env.VUE_APP_BASE_URL}/room`).reply(200, {
 mock.onGet(`${process.env.VUE_APP_BASE_URL}/small_room`).reply(200, {
   roomDetails: [
     {
+      imgUrl: ['room14.jpg', 'room18.jpg', 'bathroom03.jpg'],
       Number_of_pings: '30坪',
       Air_conditioner: '冷氣',
       Heating: '暖氣',
@@ -1196,6 +1200,7 @@ mock.onGet(`${process.env.VUE_APP_BASE_URL}/small_room`).reply(200, {
 mock.onGet(`${process.env.VUE_APP_BASE_URL}/large_room`).reply(200, {
   roomDetails: [
     {
+      imgUrl: ['room14.jpg', 'room18.jpg', 'bathroom03.jpg'],
       Number_of_pings: '50坪',
       Air_conditioner: '冷氣',
       Heating: '暖氣',
@@ -1216,6 +1221,7 @@ mock.onGet(`${process.env.VUE_APP_BASE_URL}/large_room`).reply(200, {
 mock.onGet(`${process.env.VUE_APP_BASE_URL}/luxury_room`).reply(200, {
   roomDetails: [
     {
+      imgUrl: ['room14.jpg', 'room18.jpg', 'bathroom03.jpg'],
       Number_of_pings: '80坪',
       Air_conditioner: '冷氣',
       Heating: '暖氣',
@@ -1230,6 +1236,66 @@ mock.onGet(`${process.env.VUE_APP_BASE_URL}/luxury_room`).reply(200, {
       'Coin-operated_dryer': '投幣式烘衣機',
       Parking: '免費停車場',
       Baggage_Deposit: '免費行李寄放'
+    }
+  ]
+})
+mock.onGet(`${process.env.VUE_APP_BASE_URL}/pet_accommodation`).reply(200, {
+  petroom: [
+    {
+      imgUrl: 'room_dog01.jpg',
+      PetRoom_Type: '狗狗房',
+      PetRoom_Living_Population: '一犬一房',
+      path: 'room_dog'
+    },
+    {
+      imgUrl: 'room_cat01.jpg',
+      PetRoom_Type: '貓貓房',
+      PetRoom_Living_Population: '一貓一房',
+      path: 'room_cat'
+    },
+    {
+      imgUrl: 'room_rabbit_and_guineapig01.jpg',
+      PetRoom_Type: '兔兔 | 天竺鼠',
+      PetRoom_Living_Population: '隱密好房',
+      path: 'room_rabbitANDguineapig'
+    },
+    {
+      imgUrl: 'room_hamster01.jpg',
+      PetRoom_Type: '倉鼠房',
+      PetRoom_Living_Population: '好觀察的好房',
+      path: 'room_hamster'
+    }
+  ]
+})
+
+mock.onGet(`${process.env.VUE_APP_BASE_URL}/room_dog`).reply(200, {
+  petAccommodationDetail: [
+    {
+      imgUrl: 'room_dog01.jpg',
+      PetRoom_Type: '獨立犬房',
+      PetRoom_Of_pings: '5坪',
+      Temperature_Adjustment: '恆溫調節',
+      Outdoor_Scenery: '觀賞戶外風景',
+      Independent_Space: '獨立空間',
+      Remote_Monitoring_Equipment: '24小時遠端監控設備',
+      Take_One_More_Walk: '散步多一次',
+      Touch: '摸摸',
+      Playing: '玩耍',
+      Feed_Dessert: '餵點心',
+      Feed_Medicine: '餵藥',
+      Room_Serve_Description: [
+        '每日固定散步兩次',
+        '一天餵食兩次',
+        '一小時清潔一次環境',
+        '可攜帶毛孩熟悉物品一同住宿',
+        '提供視訊服務，可遠端跟毛孩說話，或觀看毛孩目前狀況'
+      ],
+      Accommodation_Notice: [
+        '需提供施打疫苗，以及體內、體外除蟲之證明',
+        '如寵物有特殊狀況需注意者，請於住宿前告知',
+        '如為初次寄宿，請飼主預留30分鐘，本館於確認毛孩安置狀況穩定後，飼主始可離開'
+      ],
+      Price: '1000'
     }
   ]
 })

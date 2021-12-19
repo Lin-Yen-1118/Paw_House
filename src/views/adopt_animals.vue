@@ -66,7 +66,12 @@ export default {
 
   computed: {},
 
-  watch: {},
+  watch: {
+    $route(value) {
+      this.animalsList = []
+      this.getAnimalsList(value.name)
+    }
+  },
 
   mounted() {
     const animalsName = this.$route.name
@@ -89,7 +94,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/scss/adopt.scss';
-</style>

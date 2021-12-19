@@ -11,6 +11,22 @@
           </div>
           <!-- 三張房型照片 -->
           <div class="room_pic_itemsBox">
+            <div>
+              <img
+                v-for="(imgName, imgIndex) of item.imgUrl"
+                :key="imgIndex"
+                :src="require(`../assets/images/room/${imgName}`)"
+                :class="imgIndex === 0 ? 'largerImg' : 'smallerImg'"
+                alt="房間圖片"
+                title="住宿房型照片"
+              />
+            </div>
+            <!-- <div>
+              <img class="rooms_pic_items" src=~@/aasets/room/room14.jpg>
+            </div>
+            <div>
+              <img class="rooms_pic_items" src=~@/aasets/room/room18.jpg>
+            </div> -->
             <!-- <div>
               <img class="rooms_pic_items" src=~@/aasets/room/bathroom03.jpg>
                         </div>

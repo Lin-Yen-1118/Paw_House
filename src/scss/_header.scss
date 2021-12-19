@@ -171,25 +171,24 @@ li.adopt_menu {
         color: #000000;
         font-size: 20px;
         text-align: center;
-        background-color: rgba(255, 255, 250, 0.7);
+        background-color: rgba(255, 255, 250, 1);
         height: 50px;
         width: 100px;
         @include tablet {
           width: 100%;
           position: relative;
           z-index: 1;
-          background-color: rgba(255, 255, 250, 0.9);
         }
       }
       &:focus {
         span {
-          background-color: rgba(255, 255, 250, 0.7);
+          background-color: rgba(255, 255, 250, 1);
           color: #edece9;
         }
       }
       &:hover {
         span {
-          background-color: rgba(255, 255, 250, 0.3);
+          background-color: rgba(255, 255, 250, 1);
           color: #644d08;
         }
       }
@@ -244,23 +243,22 @@ li.booking_rooms_menu {
         color: #000000;
         font-size: 20px;
         text-align: center;
-        background-color: rgba(255, 255, 250, 0.5);
+        background-color: rgba(255, 255, 250, 1);
         height: 50px;
         @include tablet {
           width: 100%;
-          background-color: rgba(255, 255, 250, 0.9);
         }
       }
     }
     &:hover {
       span {
-        background-color: rgba(255, 255, 250, 0.3);
+        background-color: rgba(255, 255, 250, 1);
         color: #644d08;
       }
     }
     &:focus {
       span {
-        background-color: rgba(255, 255, 250, 0.5);
+        background-color: rgba(255, 255, 250, 1);
         color: #edece9;
       }
     }

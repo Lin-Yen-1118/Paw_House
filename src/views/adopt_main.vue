@@ -348,7 +348,3 @@ export default {
   name: 'AdoptMain'
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/scss/main.scss';
-</style>

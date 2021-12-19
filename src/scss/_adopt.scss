@@ -1,9 +1,4 @@
-/* div.bg {
-  width: 100%;
-  position: relative;
-} */
 div.breadcrumb {
-  /* border: 1px solid red; */
   display: inline-block;
   margin-top: 100px;
   width: 300px;
@@ -16,18 +11,16 @@ div.breadcrumb > a :after {
 }
 div.breadcrumb > a :after:last-child {
   content: '111';
-  /* border: 1px solid blue; */
 }
 
 /* 前導文字 */
 div.lead_text {
   text-align: center;
-  /* border: 1px solid yellow; */
+
   margin: 150px 0px 56px 0px;
 }
 
 div.adopt {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,13 +241,11 @@ div.adopt_pagination_box_selecter > ul.pagination_selecter > li {
   margin: 0px 10px;
 }
 div.adopt_pagination_box_selecter > ul.pagination_selecter > li > a.active {
-  /* border: 1px solid rgb(231, 10, 183); */
   background-color: rgb(230, 178, 111);
   border-radius: 20px;
   border: 1.5px solid #c4c4c4;
 }
 div.adopt_pagination_box_selecter > ul.pagination_selecter > li > a:not(active) {
-  /* border: 1px solid rgb(231, 10, 183); */
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   border: 1.5px solid #c4c4c4;
@@ -266,7 +257,6 @@ div.adopt_pagination_box_selecter > ul.pagination_selecter > li > a:hover {
 
 div.adopt_pagination_box_selecter > ul.pagination_selecter > li > a > p {
   color: #575554;
-  /* border: 1px solid purple; */
   border-radius: 10px;
   width: 100px;
   height: 50px;

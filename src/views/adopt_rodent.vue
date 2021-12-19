@@ -36,7 +36,3 @@ export default {
   name: 'AdoptRodent'
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/scss/adopt.scss';
-</style>

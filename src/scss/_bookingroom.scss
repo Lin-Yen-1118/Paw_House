@@ -1,254 +1,188 @@
-/* 分頁 */
-// .room_pagination_box {
-//     display: block;
-//     margin: 0 auto;
-//     margin-top: 200px;
-// }
-// .room_pagination_box {
-//     ul.pagination {
-//         display: flex;
-//         padding: 0;
-//         margin: 0 auto;
-//         max-width: 600px;
-//     }
-// }
-// ul.pagination li {
-//     display: inline;
-// }
-// ul.pagination li a {
-//     border: 3px solid #dadada;
-//     border-radius: 10px;
-//     color: rgb(50, 50, 51);
-//     float: left;
-//     padding: 8px 16px;
-//     text-decoration: none;
-//     font-size: 28px;
-//     transition: background-color 0.3s;
-//     margin: 0 3px;
-//     box-shadow: #e7eaec 2px 2px 2px 1px;
-//     position: relative;
-// }
-
-// @media screen and (min-width: 768px) and (max-width: 992px) {
-//     ul.pagination li a {
-//         padding: 10px;
-//         font-size: 20px;
-//         margin: 0px;
-//     }
-// }
-// @media screen and (min-width: 576px) and (max-width: 767px) {
-//     ul.pagination li a {
-//         padding: 10px;
-//         font-size: 20px;
-//         margin: 0px;
-//     }
-// }
-// @media screen and (max-width: 575px) {
-//     ul.pagination li a {
-//         padding: 10px;
-//         font-size: 20px;
-//         margin: 0px;
-//     }
-// }
-
-// ul.pagination li a.active {
-//     background-color: #e8e8e8;
-
-//     border-radius: 5px;
-// }
-// ul.pagination li a:hover:not(.active) {
-//     box-shadow: #e7eaec 1px 1px 1px 1px;
-// }
-// ul.pagination li a:hover:not(.active) {
-//     box-shadow: #d0d3d3 2px 2px 2px 1px;
-// }
-
-/* 加入分頁選擇器 */
-// #SmallRoom:target,
-// #LargeRoom:target,
-// #LuxuryRoom:target {
-// }
 .room_box {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .booking_cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  box-sizing: border-box;
 }
 .booking_info {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  margin: 20px;
+  padding: 15px;
+  margin: 20px 0px 100px 0px;
+  @include tablet {
     width: 100%;
-    max-width: 800px;
     height: 100%;
-    margin: 20px;
-    padding: 15px;
-    margin: 20px 0px 100px 0px;
-    @include tablet {
-        width: 100%;
-        height: 100%;
-        padding: 0px;
-        margin: 0px;
-        margin-bottom: 50px;
-    }
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
 }
 
 .booking_info_pic {
-    width: 100%;
+  width: 100%;
 }
 /* 房型照片尺寸調整 */
 .main_room_pic {
-    max-width: 1200px;
-    display: flex;
-    width: 100%;
-    // @include tablet {
-    //     width: 100%;
-    // }
+  max-width: 1200px;
+  display: flex;
+  width: 100%;
 }
 
 .room_pic_itemsBox {
-    img {
-        .rooms_pic {
-            max-width: 800px;
-            width: 100%;
-            @include tablet {
-                height: 100%;
-                border-radius: 10px;
-            }
-        }
+  img {
+    .rooms_pic {
+      max-width: 800px;
+      width: 100%;
+      @include tablet {
+        height: 100%;
+        border-radius: 10px;
+      }
     }
+  }
 }
 
 /* 三張房型照片排列方式 */
 .room_pic_itemsBox {
-    display: flex;
-    margin: 5px 0px;
-    @include tablet {
-        width: 100%;
-        margin: 0px;
-    }
+  display: flex;
+  margin: 5px 0px;
+  @include tablet {
+    width: 100%;
+    margin: 0px;
+  }
 }
 
 /* 三張房型照片尺寸 */
 .rooms_pic_items {
-    /* border: 1px solid red; */
-    max-width: calc(800px / 3);
-    padding: 5px;
+  /* border: 1px solid red; */
+  max-width: calc(800px / 3);
+  padding: 5px;
+  width: 100%;
+  @include tablet {
+    max-width: calc(992px / 3);
     width: 100%;
-    @include tablet {
-        max-width: calc(992px / 3);
-        width: 100%;
-        padding: 3px;
-        border-radius: 10px;
-    }
-    @include pad {
-        max-width: calc(767px / 3);
-    }
-    @include mobile {
-        max-width: calc(575px / 3);
-        max-height: calc(575px / 3);
-        padding: 2px;
-    }
+    padding: 3px;
+    border-radius: 10px;
+  }
+  @include pad {
+    max-width: calc(767px / 3);
+  }
+  @include mobile {
+    max-width: calc(575px / 3);
+    max-height: calc(575px / 3);
+    padding: 2px;
+  }
 }
 
 .booking_info_description {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    @include tablet {
-        padding: 12px;
-    }
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  @include tablet {
+    padding: 12px;
+  }
 }
 
 .rooms_details {
-    span {
-        border: 1px solid rgb(15, 15, 15);
-        border-radius: 2px;
-        padding: 2px;
-        margin: 3px 2px;
-        display: inline-block;
-        @include tablet {
-            margin: 3px 0px;
-        }
+  span {
+    border: 1px solid rgb(15, 15, 15);
+    border-radius: 2px;
+    padding: 2px;
+    margin: 3px 2px;
+    display: inline-block;
+    @include tablet {
+      margin: 3px 0px;
     }
+  }
 }
 
 .rooms_main_details {
-    margin: 10px 0px;
-    h3 {
-        margin: 5px 0px;
-        line-height: 35px;
-    }
+  margin: 10px 0px;
+  h3 {
+    margin: 5px 0px;
+    line-height: 35px;
+  }
 }
 
 .public_use {
-    span {
-        border: 1px solid rgb(15, 15, 15);
-        border-radius: 2px;
-        padding: 2px;
-        margin: 3px 2px;
-        display: inline-block;
-    }
-    @include tablet {
-        margin: 3px 0px;
-    }
+  span {
+    border: 1px solid rgb(15, 15, 15);
+    border-radius: 2px;
+    padding: 2px;
+    margin: 3px 2px;
+    display: inline-block;
+  }
+  @include tablet {
+    margin: 3px 0px;
+  }
 }
 .housing_policy {
-    p {
-        position: relative;
-        padding-left: 20px;
-        /* border:1px solid red; */
-    }
-    p:before {
-        content: '';
-        background-image: url(~@/assets/images/svg/paw.svg);
-        background-repeat: no-repeat;
-        width: 15px;
-        height: 15px;
-        position: absolute;
-        left: -2px;
-        top: 10px;
-        text-align: center;
-    }
+  p {
+    position: relative;
+    padding-left: 20px;
+    /* border:1px solid red; */
+  }
+  p:before {
+    content: '';
+    background-image: url(~@/assets/images/svg/paw.svg);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: -2px;
+    top: 10px;
+    text-align: center;
+  }
 }
 .rooms_prices {
-    span {
-        display: flex;
-        justify-content: flex-end;
-        margin: 35px 0px;
-    }
-    @include tablet {
-        padding-right: 25px;
-    }
-    .prices {
-        color: rgb(12, 12, 241);
-        margin: 0px 3px;
-        font-size: 28px;
-        font-weight: 700;
-    }
+  span {
+    display: flex;
+    justify-content: flex-end;
+    margin: 35px 0px;
+  }
+  @include tablet {
+    padding-right: 25px;
+  }
+  .prices {
+    color: rgb(12, 12, 241);
+    margin: 0px 3px;
+    font-size: 28px;
+    font-weight: 700;
+  }
 }
 
 /* 按鈕樣式 */
 .booking_button {
-    input {
-        border-radius: 25px;
-        border-color: transparent;
-        color: #ffffff;
-        background-color: #ea5d39;
-        font-size: 20px;
-        max-width: 200px;
-        width: 100%;
-        height: 40px;
-        padding: 10px;
-
-        transition: all 0.1s linear;
-    }
-    input:hover {
-        background-color: #cf330c;
-        color: #ffffff;
-    }
+  input {
+    border-radius: 25px;
+    border-color: transparent;
+    color: #ffffff;
+    background-color: #ea5d39;
+    font-size: 20px;
+    max-width: 200px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    transition: all 0.1s linear;
+  }
+  input:hover {
+    background-color: #cf330c;
+    color: #ffffff;
+  }
+}
+.room_pic_itemsBox {
+  .largerImg {
+    width: 100%;
+  }
+  .smallerImg {
+    width: 50%;
+  }
 }

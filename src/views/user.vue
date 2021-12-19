@@ -27,7 +27,7 @@
             <input
               type="button"
               class="
-                    user_form_input user_form_input_bottom user_botton
+                    user_form_input user_form_input_button user_button
                     login_btn
                   "
               name=""
@@ -57,10 +57,10 @@
           <div class="user_signin user_signin_text">
             還不是會員?立即加入我們
           </div>
-          <div class="user_signin user_signin_bottom_box">
+          <div class="user_signin user_signin_button_box">
             <input
               type="button"
-              class="user_signin_bottom user_botton"
+              class="user_signin_button user_button"
               name=""
               value="註冊"
               onclick="location.href='./user_signIn.html'"
@@ -77,7 +77,3 @@ export default {
   name: 'User'
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/scss/user.scss';
-</style>

@@ -24,35 +24,35 @@ export default {
       petroomItemList: [
         {
           routeName: './room_dog.html',
-          imgSrc: require('../../assets/images/pet_room/02.jpg'),
+          imgSrc: require('../../assets/images/pet_accommodation/02.jpg'),
           title: '狗狗寄宿',
           alt: '寵物住宿',
           span: '犬'
         },
         {
           routeName: './room_cat.html',
-          imgSrc: require('../../assets/images/pet_room/01.jpg'),
+          imgSrc: require('../../assets/images/pet_accommodation/01.jpg'),
           title: '貓貓寄宿',
           alt: '寵物住宿',
           span: '貓'
         },
         {
           routeName: './room_rabbitANDguineapig.html',
-          imgSrc: require('../../assets/images/pet_room/07.jpg'),
+          imgSrc: require('../../assets/images/pet_accommodation/07.jpg'),
           title: '兔兔寄宿',
           alt: '寵物住宿',
           span: '兔'
         },
         {
           routeName: './room_rabbitANDguineapig.html',
-          imgSrc: require('../../assets/images/pet_room/06.jpg'),
+          imgSrc: require('../../assets/images/pet_accommodation/06.jpg'),
           title: '天竺鼠寄宿',
           alt: '寵物住宿',
           span: '天竺鼠'
         },
         {
           routeName: './room_hamster.html',
-          imgSrc: require('../../assets/images/pet_room/09.jpg'),
+          imgSrc: require('../../assets/images/pet_accommodation/09.jpg'),
           title: '倉鼠寄宿',
           alt: '寵物住宿',
           span: '倉鼠'

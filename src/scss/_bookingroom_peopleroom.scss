@@ -1,144 +1,144 @@
 /*主要內容區塊*/
 div.room_box {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 /* 房型照片與簡述 */
 .room_box_item {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    vertical-align: middle;
-    margin-top: 100px;
-    @include tablet {
-        margin-top: 30px;
-        padding: 0px 10px;
-        flex-direction: column;
-    }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  margin-top: 100px;
+  @include tablet {
+    margin-top: 30px;
+    padding: 0px 10px;
+    flex-direction: column;
+  }
 }
 /* 前導文字 */
 .room_leading {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px;
+  h2 {
     width: 100%;
-    text-align: center;
-    margin: 10px 0px;
-    h2 {
-        width: 100%;
 
-        @include tablet {
-            text-align: left;
-            padding: 0 10px;
-        }
+    @include tablet {
+      text-align: left;
+      padding: 0 10px;
     }
+  }
 }
 .room_review_box {
-    display: flex;
-    line-height: 30px;
-    @include tablet {
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 0px;
-    }
-    @include mobile {
-        flex-direction: row;
-    }
+  display: flex;
+  line-height: 30px;
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+  @include mobile {
+    flex-direction: row;
+  }
 }
 .room_review {
-    width: 90%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 3px 1px #c4c4c4;
-    border-radius: 10px;
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 3px 1px #c4c4c4;
+  border-radius: 10px;
 
-    @include tablet {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-    @include pad {
-        width: 100%;
-    }
+  @include tablet {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  @include pad {
+    width: 100%;
+  }
 }
 .room_overview {
+  width: 100%;
+  @include tablet {
     width: 100%;
-    @include tablet {
-        width: 100%;
-    }
+  }
 }
 
 .room_pic {
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 /*本館住宿特色*/
 .booking_features {
-    width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .booking_features_title {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .features_content {
-    width: 100%;
-    padding-top: 50px;
-    @include flex_center;
-    @include tablet {
-        flex-direction: column;
-        align-items: center;
-    }
+  width: 100%;
+  padding-top: 50px;
+  @include flex_center;
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .booking_features_box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    @include tablet {
-        margin: 20px 0;
-    }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    margin: 20px 0;
+  }
 }
 .booking_features_box_pic {
-    width: 100%;
-    display: flex;
-    img {
-        width: 80%;
-        border-radius: 50%;
-        box-shadow: 0 0 4px 3px #c4c4c4;
-    }
+  width: 100%;
+  display: flex;
+  img {
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 3px #c4c4c4;
+  }
 }
 
 .booking_features_box_description {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    h3 {
-        margin: 15px 0px;
-    }
-    p {
-        width: 100%;
-    }
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin: 15px 0px;
+  }
+  p {
+    width: 100%;
+  }
 }
 
 /* 照片牆 */
 .photo_grid {
-    padding: 50px;
-    font-size: 0px;
-    display: flex;
-    flex-direction: column;
+  padding: 50px;
+  font-size: 0px;
+  display: flex;
+  flex-direction: column;
 }
 .photo_grid_content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .photo_grid_title {
-    h2 {
-        padding: 50px 0px;
-    }
+  h2 {
+    padding: 50px 0px;
+  }
 }
 .photo_grid_item_box {
-    font-size: 0px;
-    display: flex;
+  font-size: 0px;
+  display: flex;
 }
