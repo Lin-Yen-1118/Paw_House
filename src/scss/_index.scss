@@ -1,532 +1,611 @@
 /*banner*/
 div.pre_box {
-    position: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    div.pre_box_content {
-        position: relative;
-        div.pre_item_pic {
-            background-image: url('~@/assets/images/bg/01.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            width: 100%;
-            height: 1200px;
-            background-position: 100% 80%;
-            background-attachment: fixed;
-            @include tablet {
-                background-position: center;
-            }
-            div.pre_txt {
-                position: absolute;
-                top: 200px;
-                left: 150px;
-                @include tablet {
-                    top: 40px;
-                    left: 100px;
-                }
-                @include pad {
-                    top: 100px;
-                    left: 100px;
-                }
-                @include mobile {
-                    left: 50px;
-                }
-                p {
-                    font-size: 28px;
-                    font-weight: 700;
-                    color: #ccb89f;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    background-image: url('~@/assets/images/bg/01.jpg');
-                    background-position: bottom 20% right 50%;
-                    line-height: 1.5;
-                }
-            }
+  position: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  div.pre_box_content {
+    position: relative;
+    div.pre_item_pic {
+      background-image: url('~@/assets/images/bg/01.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      width: 100%;
+      height: 1200px;
+      background-position: 100% 80%;
+      background-attachment: fixed;
+      @include tablet {
+        background-position: center -180px;
+        background-attachment: scroll;
+      }
+      div.pre_txt {
+        position: absolute;
+        top: 200px;
+        left: 150px;
+        @include tablet {
+          top: 40px;
+          left: 100px;
         }
+        @include pad {
+          top: 100px;
+          left: 100px;
+        }
+        @include mobile {
+          left: 50px;
+        }
+        p {
+          font-size: 28px;
+          font-weight: 700;
+          color: #ccb89f;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          background-image: url('~@/assets/images/bg/01.jpg');
+          background-position: bottom 20% right 50%;
+          line-height: 1.5;
+        }
+      }
     }
+  }
 }
 
 /* index adopt */
 .index_adopt_box {
-    font-size: 0px;
+  font-size: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 10px;
+  width: 100%;
+  margin: 0 auto;
+  @include tablet {
+    width: 100%;
+  }
+  /* 認養標題 */
+  .index_adopt_box_title {
+    width: 100%;
     text-align: center;
+    color: #535151;
+    margin: 10px 0px;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .index_adopt_item_box {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
     flex-direction: column;
-    padding: 100px 10px;
     width: 100%;
     margin: 0 auto;
     @include tablet {
-        width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
     }
-    /* 認養標題 */
-    .index_adopt_box_title {
-        width: 100%;
-        text-align: center;
-        color: #535151;
-        margin: 10px 0px;
-        @include tablet {
-            width: 100%;
-        }
+
+    /* 認養照片調整位置 */
+    .index_adopt_left {
+      left: 90px;
     }
-    .index_adopt_item_box {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0 auto;
-        @include tablet {
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-        }
+    .index_adopt_right {
+      right: 120px;
+    }
 
-        /* 認養照片調整位置 */
-        .index_adopt_left {
-            left: 90px;
-        }
-        .index_adopt_right {
-            right: 120px;
-        }
+    /* 認養照片 */
+    .index_adopt_item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1000px;
 
-        /* 認養照片 */
-        .index_adopt_item {
+      margin: 0 auto;
+      position: relative;
+      @include tablet {
+        position: static;
+      }
+      @include tablet {
+        width: calc(100% / 3);
+      }
+      @include pad {
+        width: calc(100% / 2);
+      }
+      @include mobile {
+        width: calc(100% / 3);
+        margin: 0;
+      }
+      /* 圖片加動畫 */
+      .adopt_pic {
+        a {
+          img {
+            height: 100%;
+            animation-name: adopt_pic;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            padding: 10px;
+            @keyframes adopt_pic {
+              0% {
+                border-radius: 55% 45% 50% 40%;
+              }
+
+              100% {
+                border-radius: 40% 50% 45% 55%;
+              }
+            }
+            @include tablet {
+              width: 100%;
+            }
+          }
+          span {
+            position: absolute;
             display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 1000px;
-
-            margin: 0 auto;
-            position: relative;
-            @include tablet {
-                position: static;
-            }
-            @include tablet {
-                width: calc(100% / 3);
-            }
-            @include pad {
-                width: calc(100% / 2);
-            }
-            @include mobile {
-                width: calc(100% / 3);
-                margin: 0;
-            }
-            /* 圖片加動畫 */
-            .adopt_pic {
-                a {
-                    img {
-                        height: 100%;
-                        animation-name: adopt_pic;
-                        animation-duration: 4s;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate-reverse;
-                        padding: 10px;
-                        @keyframes adopt_pic {
-                            0% {
-                                border-radius: 55% 45% 50% 40%;
-                            }
-
-                            100% {
-                                border-radius: 40% 50% 45% 55%;
-                            }
-                        }
-                        @include tablet {
-                            width: 100%;
-                        }
-                    }
-                    span {
-                        position: absolute;
-                        display: flex;
-                        top: -35px;
-                        padding: 0px 50px;
-                    }
-                }
-            }
+            top: -35px;
+            padding: 0px 50px;
+          }
         }
+      }
     }
+  }
 }
 
 /* 住宿服務 */
 .index_room_box {
+  @include flex_center;
+  @include marginAuto;
+  flex-direction: column;
+  width: 100%;
+  font-size: 0px;
+  @include tablet {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @include mobile {
+    width: 100%;
+  }
+  .room_title {
     @include flex_center;
     @include marginAuto;
-    flex-direction: column;
+    margin: 10px;
+  }
+  .index_room_content {
+    @include flex_center;
+    @include marginAuto;
+    max-width: 1200px;
     width: 100%;
-    font-size: 0px;
+    position: relative;
     @include tablet {
-        width: 90%;
-        margin: 0 auto;
+      width: 90%;
     }
-    @include mobile {
+    .index_room_item {
+      @include flex_center;
+      width: 100%;
+      @include tablet {
         width: 100%;
-    }
-    .room_title {
-        @include flex_center;
-        @include marginAuto;
-        margin: 10px;
-    }
-    .index_room_content {
-        @include flex_center;
-        @include marginAuto;
-        max-width: 1200px;
+      }
+      .index_room {
         width: 100%;
-        position: relative;
-        @include tablet {
-            width: 90%;
-        }
-        .index_room_item {
-            @include flex_center;
-            width: 100%;
-            @include tablet {
-                width: 100%;
-            }
-            .index_room {
-                width: 100%;
-                display: flex;
+        display: flex;
 
+        @include tablet {
+          width: 100%;
+        }
+        a {
+          .room_item {
+            .room_pic {
+              img {
+                width: 100%;
+                background: #000;
+                opacity: 0.9;
+                filter: blur(2px);
                 @include tablet {
-                    width: 100%;
+                  background: none;
+                  opacity: 1;
+                  filter: blur(0px);
                 }
-                a {
-                    .room_item {
-                        .room_pic {
-                            img {
-                                width: 100%;
-                                background: #000;
-                                opacity: 0.9;
-                                filter: blur(2px);
-                                @include tablet {
-                                    background: none;
-                                    opacity: 1;
-                                    filter: blur(0px);
-                                }
-                            }
-                        }
-                        &:hover {
-                            img {
-                                opacity: 1;
-                                filter: none;
-                            }
-                        }
-                    }
-                }
+              }
             }
-        }
-        /* 住宿服務文字敘述 */
-        .index_room_descript {
-            width: 100%;
-            p {
-                position: absolute;
-                font-size: 32px;
-                font-weight: 700;
-                color: #ffffff;
-                line-height: 1.8;
-                top: 50px;
+            &:hover {
+              img {
+                opacity: 1;
+                filter: none;
+              }
             }
+          }
         }
+      }
     }
+    /* 住宿服務文字敘述 */
+    .index_room_descript {
+      width: 100%;
+      p {
+        position: absolute;
+        font-size: 32px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.8;
+        top: 50px;
+      }
+    }
+  }
 }
 
 /* 寵物寄宿服務 */
 .index_petroom_box {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px 0px;
+  padding: 100px 0px;
+  @include tablet {
     width: 100%;
-    margin: 30px 0px;
-    padding: 100px 0px;
-    @include tablet {
-        width: 100%;
-    }
-    .room_title {
-        @include flex_center;
-        @include marginAuto;
-        margin: 10px;
-    }
+  }
+  .room_title {
+    @include flex_center;
+    @include marginAuto;
+    margin: 10px;
+  }
 }
 
 .index_petroom_box {
-    .index_petroom_content {
-        @include flex_center;
-        @include marginAuto;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        max-width: 1200px;
-        position: relative;
-        @include tablet {
-            width: 90%;
-        }
-        .index_petroom_item {
-            display: flex;
-            flex-direction: row;
-            .index_petroom {
-                display: flex;
-                position: relative;
-                font-size: 0px;
-                a {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 1;
-                    top: 0;
-                    left: 0;
-                }
-                .petroom_item {
-                    position: relative;
-                    .petroom_pic {
-                        display: flex;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                    .petroom_link {
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        padding: 10px;
-                        background-color: rgba(255, 255, 250, 0.2);
-                        width: 100%;
-                        height: 100%;
-                        text-align: center;
-                        font-size: 20px;
-                        font-weight: bold;
-                        @include tablet {
-                            width: 100%;
-                            background-color: rgba(255, 255, 250, 0);
-                        }
-                    }
-                }
-            }
-        }
+  .index_petroom_content {
+    @include flex_center;
+    @include marginAuto;
+
+    flex-direction: row;
+    width: 100%;
+    padding: 0px 10px;
+    position: relative;
+    @include tablet {
+      width: 90%;
     }
+    .index_petroom_item {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      .index_petroom {
+        display: flex;
+        position: relative;
+        font-size: 0px;
+        a {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          top: 0;
+          left: 0;
+        }
+        .petroom_item {
+          position: relative;
+          .petroom_pic {
+            display: flex;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .petroom_link {
+            display: block;
+            position: absolute;
+            top: 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 250, 0.2);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            @include tablet {
+              width: 100%;
+              background-color: rgba(255, 255, 250, 0);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-div.index_petroom_box > div.index_petroom_content > div.index_petroom_item > div.index_petroom > a > div.petroom_item:hover > div.room_link {
-    animation-name: petroom_animation;
-    animation-duration: 2s;
-    animation-delay: 0.2s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse;
+div.index_petroom_box
+  > div.index_petroom_content
+  > div.index_petroom_item
+  > div.index_petroom
+  > a
+  > div.petroom_item:hover
+  > div.room_link {
+  animation-name: petroom_animation;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
 }
 @keyframes petroom_animation {
-    50% {
-        background-color: rgba(255, 255, 250, 0.15);
-    }
-    70% {
-        background-color: rgba(255, 255, 250, 0.1);
-    }
-    100% {
-        background-color: rgba(255, 255, 250, 0);
-    }
+  50% {
+    background-color: rgba(255, 255, 250, 0.15);
+  }
+  70% {
+    background-color: rgba(255, 255, 250, 0.1);
+  }
+  100% {
+    background-color: rgba(255, 255, 250, 0);
+  }
 }
 
-div.index_petroom_box > div.index_petroom_content > div.index_petroom_item > div.index_petroom > a > div.petroom_item > div.room_link > span {
-    color: #ffffff;
-    font-size: 22px;
-    padding: 10px;
-    font-weight: 700;
+div.index_petroom_box
+  > div.index_petroom_content
+  > div.index_petroom_item
+  > div.index_petroom
+  > a
+  > div.petroom_item
+  > div.room_link
+  > span {
+  color: #ffffff;
+  font-size: 22px;
+  padding: 10px;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.index_petroom_box > div.index_petroom_content > div.index_petroom_item > div.index_petroom > a > div.petroom_item > div.room_link > span {
-        padding: 5px 10px;
-        text-align: start;
-    }
+  div.index_petroom_box
+    > div.index_petroom_content
+    > div.index_petroom_item
+    > div.index_petroom
+    > a
+    > div.petroom_item
+    > div.room_link
+    > span {
+    padding: 5px 10px;
+    text-align: start;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.index_petroom_box > div.index_petroom_content > div.index_petroom_item > div.index_petroom > a > div.petroom_item > div.room_link > span {
-        padding: 5px 10px;
-        text-align: start;
-    }
+  div.index_petroom_box
+    > div.index_petroom_content
+    > div.index_petroom_item
+    > div.index_petroom
+    > a
+    > div.petroom_item
+    > div.room_link
+    > span {
+    padding: 5px 10px;
+    text-align: start;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.index_petroom_box > div.index_petroom_content > div.index_petroom_item > div.index_petroom > a > div.petroom_item > div.room_link > span {
-        text-align: start;
-        font-weight: 500;
-        font-size: 16px;
-        padding: 2px;
-    }
+  div.index_petroom_box
+    > div.index_petroom_content
+    > div.index_petroom_item
+    > div.index_petroom
+    > a
+    > div.petroom_item
+    > div.room_link
+    > span {
+    text-align: start;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 2px;
+  }
 }
 
-div.index_petroom_box > div.index_petroom_content > div.index_petroom_item > div.index_petroom > a > div.petroom_item:hover > div.room_link > p {
-    color: #2f3977;
+div.index_petroom_box
+  > div.index_petroom_content
+  > div.index_petroom_item
+  > div.index_petroom
+  > a
+  > div.petroom_item:hover
+  > div.room_link
+  > p {
+  color: #2f3977;
 }
 .index_petroom_descript {
-    position: absolute;
-    display: flex;
-    bottom: 15px;
-    width: 100%;
-    /* border: 1px solid red; */
+  position: absolute;
+  display: flex;
+  bottom: 15px;
+  width: 100%;
+  /* border: 1px solid red; */
 }
 .index_petroom_descript > p {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.8;
-    width: 100%;
-    padding-left: 15%;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.8;
+  width: 100%;
+  padding-left: 15%;
 }
 /*協助我們-助糧計畫、小小志工*/
 div.other_box {
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 div.other_box > div.index_give_help_box {
-    /* border: 1px solid red; */
-    font-size: 0px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 100px;
+  /* border: 1px solid red; */
+  font-size: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 100px;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.other_box > div.index_give_help_box {
-        width: 100%;
-        max-width: 992px;
-    }
+  div.other_box > div.index_give_help_box {
+    width: 100%;
+    max-width: 992px;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.other_box > div.index_give_help_box {
-        width: 100%;
-        max-width: 767px;
-    }
+  div.other_box > div.index_give_help_box {
+    width: 100%;
+    max-width: 767px;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.other_box > div.index_give_help_box {
-        max-width: 575px;
-        width: 100%;
-    }
+  div.other_box > div.index_give_help_box {
+    max-width: 575px;
+    width: 100%;
+  }
 }
 div.other_box > div.index_give_help_box > div.other_box_title {
-    text-align: center;
-    margin: 10px;
+  text-align: center;
+  margin: 10px;
 }
 /* 協助毛孩生活更美好 */
 div.other_box > div.index_give_help_box > div.index_give_help {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    /* margin: 10px 0px; */
-    /* border: 1px solid red; */
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  /* margin: 10px 0px; */
+  /* border: 1px solid red; */
+  width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.other_box > div.index_give_help_box > div.index_give_help {
-        max-width: 992px;
-        width: 100%;
-        padding: 0px 10px;
-    }
+  div.other_box > div.index_give_help_box > div.index_give_help {
+    max-width: 992px;
+    width: 100%;
+    padding: 0px 10px;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.other_box > div.index_give_help_box > div.index_give_help {
-        flex-direction: column;
-        max-width: 767px;
-        width: 100%;
-        padding: 0px 10px;
-    }
+  div.other_box > div.index_give_help_box > div.index_give_help {
+    flex-direction: column;
+    max-width: 767px;
+    width: 100%;
+    padding: 0px 10px;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.other_box > div.index_give_help_box > div.index_give_help {
-        flex-direction: column;
-        max-width: 575px;
-        width: 100%;
-        padding: 0px 10px;
-    }
+  div.other_box > div.index_give_help_box > div.index_give_help {
+    flex-direction: column;
+    max-width: 575px;
+    width: 100%;
+    padding: 0px 10px;
+  }
 }
 div.other_box > div.index_give_help_box > div.index_give_help > div.index_give_help_main {
-    /* border: 1px solid green; */
-    display: inline-block;
-    min-width: 300px;
-    padding: 0 10px;
-    margin: 0px;
-    text-align: start;
+  /* border: 1px solid green; */
+  display: inline-block;
+  min-width: 300px;
+  padding: 0 10px;
+  margin: 0px;
+  text-align: start;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.other_box > div.index_give_help_box > div.index_give_help > div.index_give_help_main {
-        width: 100%;
-        padding: 0px;
-        margin: 10px 0px;
-    }
+  div.other_box > div.index_give_help_box > div.index_give_help > div.index_give_help_main {
+    width: 100%;
+    padding: 0px;
+    margin: 10px 0px;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.other_box > div.index_give_help_box > div.index_give_help > div.index_give_help_main {
-        width: 100%;
-        padding: 0px;
-        margin: 20px 0px;
-    }
+  div.other_box > div.index_give_help_box > div.index_give_help > div.index_give_help_main {
+    width: 100%;
+    padding: 0px;
+    margin: 20px 0px;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.other_box > div.index_give_help_box > div.index_give_help > div.index_give_help_main {
-        width: 100%;
-        padding: 0px;
-        margin: 20px 0px;
-    }
+  div.other_box > div.index_give_help_box > div.index_give_help > div.index_give_help_main {
+    width: 100%;
+    padding: 0px;
+    margin: 20px 0px;
+  }
 }
 
 div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > img {
-    width: 100%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > img {
-        width: 100%;
-        max-width: 992px;
-    }
+  div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > img {
+    width: 100%;
+    max-width: 992px;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > img {
-        width: 100%;
-        max-width: 767px;
-    }
+  div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > img {
+    width: 100%;
+    max-width: 767px;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > img {
-        width: 100%;
-        max-width: 575px;
-    }
+  div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > img {
+    width: 100%;
+    max-width: 575px;
+  }
 }
 
-div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > div.index_give_help_txt > h3 {
-    margin: 10px 0px;
-    padding: 0px 10px;
+div.index_give_help_box
+  > div.index_give_help
+  > div.index_give_help_main
+  > a
+  > div.index_give_help_txt
+  > h3 {
+  margin: 10px 0px;
+  padding: 0px 10px;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > div.index_give_help_txt {
-        height: auto;
-        width: 100%;
-    }
+  div.index_give_help_box
+    > div.index_give_help
+    > div.index_give_help_main
+    > a
+    > div.index_give_help_txt {
+    height: auto;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > div.index_give_help_txt {
-        height: auto;
-        width: 100%;
-    }
+  div.index_give_help_box
+    > div.index_give_help
+    > div.index_give_help_main
+    > a
+    > div.index_give_help_txt {
+    height: auto;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 575px) {
-    div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > div.index_give_help_txt {
-        height: auto;
-        width: 100%;
-    }
+  div.index_give_help_box
+    > div.index_give_help
+    > div.index_give_help_main
+    > a
+    > div.index_give_help_txt {
+    height: auto;
+    width: 100%;
+  }
 }
-div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > div.index_give_help_txt > div.give_help_txt_content {
-    padding: 0px 10px;
+div.index_give_help_box
+  > div.index_give_help
+  > div.index_give_help_main
+  > a
+  > div.index_give_help_txt
+  > div.give_help_txt_content {
+  padding: 0px 10px;
 }
-div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > div.index_give_help_txt > div.give_help_txt_content > p {
-    color: #000000;
-    text-align: start;
-    line-height: 1.8;
+div.index_give_help_box
+  > div.index_give_help
+  > div.index_give_help_main
+  > a
+  > div.index_give_help_txt
+  > div.give_help_txt_content
+  > p {
+  color: #000000;
+  text-align: start;
+  line-height: 1.8;
 }
-div.index_give_help_box > div.index_give_help > div.index_give_help_main > a > div.index_give_help_txt > div.give_help_txt_content > p > span {
-    color: rgb(245, 18, 18);
-    font-weight: 700;
+div.index_give_help_box
+  > div.index_give_help
+  > div.index_give_help_main
+  > a
+  > div.index_give_help_txt
+  > div.give_help_txt_content
+  > p
+  > span {
+  color: rgb(245, 18, 18);
+  font-weight: 700;
 }

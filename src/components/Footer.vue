@@ -4,7 +4,7 @@
       <div class="footer_box_content">
         <div class="footer_info_box footer_box_logo">
           <a href="./index.html" target="_self">
-            <!-- <img id="logo" src=../assets/images/svg/logo.svg//////////> -->
+            <img id="logo" src=../assets/images/svg/logo.svg />
           </a>
         </div>
 
