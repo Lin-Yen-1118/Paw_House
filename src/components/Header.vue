@@ -98,10 +98,10 @@
             </router-link>
           </li>
           <!-- 我的訂單 -->
-          <li>
+          <li class="cart_list_box">
             <router-link to="/cart" class="link_style">
               <span>
-                {{ getProductLength }}
+                <span class="cart_list">{{ getProductLength }}</span>
                 <img id="cart" src="../assets/images/svg/shopping-cart.svg" />
               </span>
             </router-link>
