@@ -14,7 +14,7 @@
             />
           </a>
           <div class="picContent">
-            <div>
+            <div class="picContent_detail">
               <p id="animals">編號:{{ item.Serial_number }}</p>
               <p class="date">進所日期:{{ item.Entry_date }}</p>
               <p class="animalSex">性別:{{ item.Gender }}</p>

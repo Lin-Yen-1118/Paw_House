@@ -1,7 +1,61 @@
-div.formTitle {
-  text-align: center;
-}
+// div.formTitle {
+//   text-align: center;
+// }
 
-form > div.user_info {
-  display: inline-block;
+// form > div.user_info {
+//   display: inline-block;
+// }
+#adopt_form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+
+  div {
+    padding: 3px 0;
+  }
+}
+.close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#close_icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 0;
+}
+.adopt_form_group {
+  background-color: #fff;
+  margin-top: 25%;
+  width: 50%;
+  max-width: 700px;
+  height: 80%;
+  padding: 10px;
+  border-radius: 2%;
+  @include tablet {
+    margin-top: 10%;
+    width: 60%;
+  }
+  @include pad {
+    height: 85%;
+  }
+  @include mobile {
+    width: 85%;
+    height: 80%;
+  }
+}
+.adopt_formBtn {
+  width: 100%;
+  position: relative;
+  @include flex_center;
+  input {
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    @include adoptBtn;
+  }
 }

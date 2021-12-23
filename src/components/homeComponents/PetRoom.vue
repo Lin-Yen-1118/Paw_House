@@ -2,7 +2,8 @@
   <div class="index_petroom_content">
     <div v-for="(item, index) of petroomItemList" :key="index" class="index_petroom_item">
       <div class="index_petroom ">
-        <a :href="item.routeName" />
+        <router-link to="/pet_accommodation" />
+        <!-- <a :href="item.routeName" /> -->
         <div class="petroom_item">
           <div class="petroom_pic">
             <img :src="item.imgSrc" :title="item.title" :alt="item.alt" />

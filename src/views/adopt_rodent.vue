@@ -1,10 +1,6 @@
 <template>
   <div>
-    <!-- 前導文字 -->
-    <div class="lead_text"><h3>這裡有許多浪浪在等家，趕快來預約互動吧</h3></div>
-
     <!-- 天竺鼠 |  倉鼠 分頁 -->
-
     <div class="adopt_pagination_box_selecter">
       <ul class="pagination_selecter">
         <li>

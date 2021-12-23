@@ -25,3 +25,15 @@
     color: #ffffff;
   }
 }
+@mixin adoptBtn {
+  background-color: #ea5d39;
+  color: #ffffff;
+  border-radius: 25px;
+  width: 200px;
+  height: 40px;
+  border: 1px solid transparent;
+  &:hover {
+    background-color: #cf330c;
+    color: #ffffff;
+  }
+}

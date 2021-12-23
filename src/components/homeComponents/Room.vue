@@ -2,14 +2,14 @@
   <div class="index_room_content">
     <div v-for="(item, index) of roomItemList" :key="index" class="index_room_item">
       <div class="index_room">
-        <a href="./bookingroom_peopleroom.html">
+        <router-link to="/room">
           <div class="room_item">
             <div class="room_pic">
               <img :src="item.imgSrc" :title="item.title" :alt="item.alt" />
             </div>
             <div class="room_link" />
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>

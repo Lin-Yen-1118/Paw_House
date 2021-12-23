@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shoppiin_list_box">
     <span v-show="getProductList.length === 0">您的購物車目前無品項 !</span>
     <div v-show="getProductList.length !== 0" class="container">
       <!-- 購買明細 -->
@@ -32,7 +32,3 @@ export default {
   mutation: {}
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/scss/cart.scss';
-</style>

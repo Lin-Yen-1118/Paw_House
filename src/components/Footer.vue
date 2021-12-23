@@ -3,9 +3,9 @@
     <div class="footer_box">
       <div class="footer_box_content">
         <div class="footer_info_box footer_box_logo">
-          <a href="./index.html" target="_self">
+          <router-link to="/">
             <img id="logo" src=../assets/images/svg/logo.svg />
-          </a>
+          </router-link>
         </div>
 
         <div class="footer_info_box footer_info">
@@ -17,19 +17,21 @@
           <br />
           <div class="footer_icon">
             <div class="footer_box_content_box_img">
-              <a href="./index.html" target="_self">
+              <router-link to="/">
+                <!-- <a href="./index.html" target="_self"> -->
                 <img src="../assets/images/svg/facebook.svg" />
-              </a>
+                <!-- </a> -->
+              </router-link>
             </div>
             <div class="footer_box_content_box_img">
-              <a href="./index.html" target="_self">
+              <router-link to="/">
                 <img src="../assets/images/svg/line.svg" />
-              </a>
+              </router-link>
             </div>
             <div class="footer_box_content_box_img">
-              <a href="./index.html" target="_self">
+              <router-link to="/">
                 <img src="../assets/images/svg/instagram.svg" />
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

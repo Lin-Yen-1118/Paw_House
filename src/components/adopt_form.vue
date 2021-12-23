@@ -114,7 +114,7 @@
         <input id="”datetime-local”" type="datetime-local" />
       </div>
       <br />
-      <div>
+      <div class="adopt_formBtn">
         <input type="submit" value="送出預約單" />
       </div>
     </form>
@@ -192,35 +192,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-#adopt_form {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 10;
-}
-.close {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-#close_icon {
-  width: 30px;
-  margin: 0 0 0 0;
-}
-.adopt_form_group {
-  background-color: #fff;
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  width: 40%;
-  max-width: 700px;
-  height: 80%;
-  padding: 10px;
-  border-radius: 2%;
-}
-</style>

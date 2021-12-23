@@ -44,7 +44,7 @@
 
         <div class="index_give_help">
           <div class="index_give_help_main">
-            <a href="./adopt.html">
+            <router-link to="/products">
               <img
                 src="../assets/images/bg/food_aid.jpg"
                 alt="毛孩助糧計畫"
@@ -65,10 +65,10 @@
                   </p>
                 </div>
               </div>
-            </a>
+            </router-link>
           </div>
           <div class="index_give_help_main">
-            <a href="./adopt.html">
+            <router-link to="/">
               <img src="../assets/images/bg/volunteer.jpg" alt="小小志工" title="點擊看志工詳情" />
               <div class="index_give_help_txt">
                 <h3>小小志工</h3>
@@ -78,7 +78,7 @@
                   <p>來被毛孩的純真融化</p>
                 </div>
               </div>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -88,7 +88,6 @@
 
 <script>
 import AdoptBox from '@/components/homeComponents/AdoptBox.vue'
-
 import Room from '@/components/homeComponents/Room.vue'
 import PetRoom from '@/components/homeComponents/PetRoom.vue'
 
