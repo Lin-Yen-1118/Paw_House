@@ -11,6 +11,17 @@
       <!-- 房型資料介紹區塊 -->
       <div v-for="(item, index) of petAccommodationDetailList" :key="index" class="pet_room_box">
         <div class="booking_info_description">
+          <div class="booking_info_pic">
+            <div class="room_pic_itemsBox main_room_pic">
+              <img
+                class=""
+                :src="require(`../assets/images/pet_accommodation/${item.imgUrl}`)"
+                alt="毛孩住宿"
+                title=""
+              />
+            </div>
+          </div>
+
           <div class="rooms_main_details">
             <h3>房型名稱:</h3>
             <p>{{ item.PetRoom_Type }}</p>
@@ -62,10 +73,11 @@
             <h3>住宿須知:</h3>
           </div>
           <div class="rooms_main_details">
-            <p>需提供施打疫苗，以及體內、體外除蟲之證明</p>
-            <p>如寵物有特殊狀況需注意者，請於住宿前告知</p>
-            <p>
-              如為初次寄宿，請飼主預留30分鐘，本館於確認毛孩安置狀況穩定後，飼主始可離開
+            <p
+              v-for="(accommodationNotice, accommodationNoticeindex) of item.Accommodation_Notice"
+              :key="accommodationNoticeindex"
+            >
+              {{ accommodationNotice }}
             </p>
           </div>
         </div>
@@ -73,7 +85,7 @@
         <div class="rooms_main_details rooms_prices">
           <span>
             <p class="prices">NTD</p>
-            <p class="prices">1000</p>
+            <p class="prices">{{ item.Price }}</p>
           </span>
         </div>
 

@@ -1300,6 +1300,104 @@ mock.onGet(`${process.env.VUE_APP_BASE_URL}/room_dog`).reply(200, {
   ]
 })
 
+mock.onGet(`${process.env.VUE_APP_BASE_URL}/room_cat`).reply(200, {
+  petAccommodationDetail: [
+    {
+      imgUrl: 'room_cat01.jpg',
+      PetRoom_Type: '獨立貓房',
+      PetRoom_Of_pings: '5坪',
+      Temperature_Adjustment: '恆溫調節',
+      Outdoor_Scenery: '觀賞戶外風景',
+      Independent_Space: '獨立空間',
+      Remote_Monitoring_Equipment: '24小時遠端監控設備',
+      Take_One_More_Walk: '散步多一次',
+      Touch: '摸摸',
+      Playing: '玩耍',
+      Feed_Dessert: '餵點心',
+      Feed_Medicine: '餵藥',
+      Room_Serve_Description: [
+        '每日固定散步兩次',
+        '一天餵食兩次',
+        '一小時清潔一次環境',
+        '可攜帶毛孩熟悉物品一同住宿',
+        '提供視訊服務，可遠端跟毛孩說話，或觀看毛孩目前狀況'
+      ],
+      Accommodation_Notice: [
+        '需提供施打疫苗，以及體內、體外除蟲之證明',
+        '如寵物有特殊狀況需注意者，請於住宿前告知',
+        '如為初次寄宿，請飼主預留30分鐘，本館於確認毛孩安置狀況穩定後，飼主始可離開'
+      ],
+      Price: '1000'
+    }
+  ]
+})
+
+mock.onGet(`${process.env.VUE_APP_BASE_URL}/room_rabbitANDguineapig`).reply(200, {
+  petAccommodationDetail: [
+    {
+      imgUrl: 'room_rabbit_and_guineapig01.jpg',
+      PetRoom_Type: '獨立寵物房',
+      PetRoom_Of_pings: '3坪',
+      Temperature_Adjustment: '恆溫調節',
+      Outdoor_Scenery: '對外窗',
+      Independent_Space: '隱蔽空間',
+      Remote_Monitoring_Equipment: '24小時遠端監控設備',
+      Take_One_More_Walk: '散步多一次',
+      Touch: '摸摸',
+      Playing: '玩耍',
+      Feed_Dessert: '餵點心',
+      Feed_Medicine: '餵藥',
+      Room_Serve_Description: [
+        '同一個飼主有多隻毛孩寄宿之需求，可同住一個空間',
+        '一天餵食兩次',
+        '一小時清潔一次環境',
+        '可攜帶毛孩熟悉物品一同住宿',
+        '提供視訊服務，可遠端跟毛孩說話，或觀看毛孩目前狀況',
+        '可自備食盆、飲水器、毛孩習慣之食物',
+        '本館有自種新鮮牧草、蔬菜，提供寄宿毛孩享用'
+      ],
+      Accommodation_Notice: [
+        '需提供寵物健康之證明',
+        '如寵物有特殊狀況需注意者，請於住宿前告知',
+        '如為初次寄宿，請飼主預留30分鐘，本館於確認毛孩安置狀況穩定後，飼主始可離開'
+      ],
+      Price: '500'
+    }
+  ]
+})
+mock.onGet(`${process.env.VUE_APP_BASE_URL}/room_hamster`).reply(200, {
+  petAccommodationDetail: [
+    {
+      imgUrl: 'room_hamster01.jpg',
+      PetRoom_Type: '尊貴倉鼠房',
+      PetRoom_Of_pings: '3坪',
+      Temperature_Adjustment: '恆溫調節',
+      Outdoor_Scenery: '對外窗',
+      Independent_Space: '隱蔽空間',
+      Remote_Monitoring_Equipment: '24小時遠端監控設備',
+      Take_One_More_Walk: '散步多一次',
+      Touch: '摸摸',
+      Playing: '玩耍',
+      Feed_Dessert: '餵點心',
+      Feed_Medicine: '餵藥',
+      Room_Serve_Description: [
+        '同一個飼主有多隻毛孩寄宿之需求，可同住一個空間',
+        '一天餵食兩次',
+        '一小時清潔一次環境',
+        '可攜帶毛孩熟悉物品一同住宿',
+        '提供視訊服務，可遠端跟毛孩說話，或觀看毛孩目前狀況',
+        '可自備食盆、飲水器、毛孩習慣之食物',
+        '本館有自種新鮮牧草、蔬菜，提供寄宿毛孩享用'
+      ],
+      Accommodation_Notice: [
+        '需提供寵物健康之證明',
+        '如寵物有特殊狀況需注意者，請於住宿前告知',
+        '如為初次寄宿，請飼主預留30分鐘，本館於確認毛孩安置狀況穩定後，飼主始可離開'
+      ],
+      Price: '300'
+    }
+  ]
+})
 // axios.get("/dogs").then(function (response) {
 //   console.log(response.data);
 // });
