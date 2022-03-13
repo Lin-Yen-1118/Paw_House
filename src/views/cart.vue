@@ -4,11 +4,11 @@
       <!-- 頭 -->
       <div class="item_header">
         <!-- 固定的 -->
-        <!-- <div class="item_detail">商品名稱</div>
+        <div class="item_detail">商品名稱</div>
         <div class="amount">數量</div>
         <div class="price">價格</div>
+        <div class="total">價格總計{{ total }}</div>
         <div class="delete">刪除</div>
-        <div class="total">價格總計:{{ total }}</div> -->
       </div>
       <!-- 購買物的主體 -->
       <div>
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       // productsList: [],
-      total: 0
+      // total: 0
     }
   },
 

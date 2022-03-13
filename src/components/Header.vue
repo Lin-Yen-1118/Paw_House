@@ -7,21 +7,20 @@
         </router-link>
       </div>
       <div class="nav_bar">
-        <!-- 用input的checkbox與for特性做漢堡選單的選取器 -->
-        <input id="burger" type="checkbox" name="" />
-        <ul class="header_bar">
-          <li v-for="(item, index) of menu" id="nav_menu" :key="index">
+        <ul class="header_bar" :class="visible ? 'menu_open' : ''">
+          <li v-for="(item, index) of menu" id="nav_menu" :key="index" class="menu">
             <router-link :to="item.path">
               <span>
                 <img id="introduction" :src="require(`../assets/images/svg/${item.icon}`)" />
               </span>
               <span>{{ item.title }}</span>
             </router-link>
-            <ul class="adopt_menu_select_menu">
+            <!-- 下拉選單 -->
+            <ul class="select_menu">
               <li
                 v-for="(subMenu, subMenuIndex) of item.children"
                 :key="subMenuIndex"
-                class="adopt_menu_select"
+                class="select_menu_item"
               >
                 <router-link :to="subMenu.path" class="link_style">
                   <span>{{ subMenu.title }}</span>
@@ -31,7 +30,7 @@
           </li>
         </ul>
       </div>
-
+      <!--購物車訂單與會員--->
       <div>
         <ul class="user_cart">
           <!-- 會員 -->
@@ -55,14 +54,16 @@
       </div>
 
       <!--漢堡選單--->
-      <!-- 用input的checkbox與for特性做漢堡選單的選取器 -->
-      <label for="burger">
-        <div class="burger_box">
-          <div class="bgr_bar top" />
-          <div class="bgr_bar middle" />
-          <div class="bgr_bar bottom" />
-        </div>
-      </label>
+      <div class="nav_menu_burger">
+        <button class="show_menu" @click="visible = !visible" />
+        <transition>
+          <div id="burger_menu" :class="visible ? 'ham_transition' : ''">
+            <div class="bgr_bar top" />
+            <div class="bgr_bar middle" />
+            <div class="bgr_bar bottom" />
+          </div>
+        </transition>
+      </div>
     </nav>
   </header>
 </template>
@@ -74,6 +75,7 @@ export default {
   name: 'Header',
   data() {
     return {
+      visible: false,
       menu: [
         {
           path: '/aboutUs',

@@ -43,7 +43,7 @@ export default {
       axios.get(`${process.env.VUE_APP_BASE_URL}/products`).then(res => {
         const productsList = res.data[productsName]
         this.productsList = productsList
-        console.log(this.productsList)
+        // console.log(this.productsList)
       })
     }
   }
