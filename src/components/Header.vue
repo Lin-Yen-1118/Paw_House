@@ -7,7 +7,7 @@
         </router-link>
       </div>
       <div class="nav_bar">
-        <ul class="header_bar" :class="visible ? 'menu_open' : ''">
+        <ul class="header_bar" :class="menuVisible ? 'menu_open' : ''">
           <li v-for="(item, index) of menu" id="nav_menu" :key="index" class="menu">
             <router-link :to="item.path">
               <span>
@@ -52,12 +52,12 @@
           </li>
         </ul>
       </div>
-
       <!--漢堡選單--->
       <div class="nav_menu_burger">
-        <button class="show_menu" @click="visible = !visible" />
+        <!-- <button class="show_menu" @click="visible = !visible" /> -->
+        <button class="show_menu" @click="toggleMenu(!menuVisible)" />
         <transition>
-          <div id="burger_menu" :class="visible ? 'ham_transition' : ''">
+          <div id="burger_menu" :class="menuVisible ? 'ham_transition' : ''">
             <div class="bgr_bar top" />
             <div class="bgr_bar middle" />
             <div class="bgr_bar bottom" />
@@ -69,13 +69,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
   name: 'Header',
   data() {
     return {
-      visible: false,
       menu: [
         {
           path: '/aboutUs',
@@ -136,11 +135,14 @@ export default {
   },
 
   computed: {
-    // 使用对象展开运算符将 getter 混入 computed 对象中
-    ...mapGetters([
-      'getProductLength'
-      // ...
-    ])
+    // ...mapGetters(['getProductLength']),
+    ...mapGetters('ui', ['menuVisible']),
+    ...mapGetters(['getProductLength'])
+  },
+
+  methods: {
+    ...mapMutations('ui', ['toggleMenu'])
+    // ...mapMutations('product', ['getProductLength'])
   }
 }
 </script>
