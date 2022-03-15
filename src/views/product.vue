@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="products_box">
-      <div v-for="(item, index) of productsList" :key="index" class="products_box_content">
+      <div v-for="(item, index) of products" :key="index" class="products_box_content">
         <item :products="item" />
       </div>
     </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { mapActions, mapGetters } from 'vuex'
 import item from './item.vue'
 
 export default {
@@ -22,30 +22,28 @@ export default {
   components: { item },
 
   data() {
-    return {
-      productsList: []
-    }
+    return {}
   },
 
-  computed: {},
+  computed: {
+    ...mapGetters('api', ['products'])
+  },
 
   watch: {},
 
   mounted() {
     const productsName = this.$route.name
-    this.getproductsList(productsName)
+    this.getproducts(productsName)
   },
 
   destroyed() {},
 
   methods: {
-    getproductsList(productsName) {
-      axios.get(`${process.env.VUE_APP_BASE_URL}/products`).then(res => {
-        const productsList = res.data[productsName]
-        this.productsList = productsList
-        // console.log(this.productsList)
-      })
-    }
+    async getproducts(productsName) {
+      await this.getproductsList(productsName)
+    },
+
+    ...mapActions('api', ['getproductsList'])
   }
 }
 </script>
