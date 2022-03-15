@@ -31,18 +31,13 @@ export default {
 
   watch: {},
 
-  mounted() {
-    const productsName = this.$route.name
-    this.getproducts(productsName)
+  async mounted() {
+    await this.getproductsList(this.$route.name)
   },
 
   destroyed() {},
 
   methods: {
-    async getproducts(productsName) {
-      await this.getproductsList(productsName)
-    },
-
     ...mapActions('api', ['getproductsList'])
   }
 }
