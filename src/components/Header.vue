@@ -42,10 +42,11 @@
         </ul>
       </div>
       <!--購物車訂單與會員--->
+      <!-- 如果先點擊burgermenu才點擊"購物車"、"會員"，burgermenu要自動隱藏 -->
       <div>
         <ul class="user_cart">
           <!-- 會員 -->
-          <li>
+          <li @click="toggleMenu(false)">
             <router-link to="/user" class="link_style">
               <span>
                 <img id="user" src=../assets/images/svg/user-circle-solid.svg />
@@ -53,7 +54,7 @@
             </router-link>
           </li>
           <!-- 我的訂單 -->
-          <li class="cart_list_box">
+          <li class="cart_list_box" @click="toggleMenu(false)">
             <router-link to="/cart" class="link_style">
               <span>
                 <span class="cart_list">{{ getProductLength }}</span>
