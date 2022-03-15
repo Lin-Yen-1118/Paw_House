@@ -6,6 +6,7 @@
           <img id="logo" src="../assets/images/svg/logo.svg" />
         </router-link>
       </div>
+      <!-- 在選取menu並執行導頁後，menu要隱藏起來 -->
       <div class="nav_bar">
         <ul class="header_bar" :class="menuVisible ? 'menu_open' : ''">
           <li v-for="(item, index) of menu" id="nav_menu" :key="index" class="menu">
@@ -65,6 +66,10 @@
         </transition>
       </div>
     </nav>
+    <!-- mask -->
+    <!-- 當menu出現時，也出現mask -->
+    <!-- 當click mask，manu跟mask都close -->
+    <div :class="menuVisible ? 'side_mask' : ''" @click="toggleMenu(!menuVisible)" />
   </header>
 </template>
 
