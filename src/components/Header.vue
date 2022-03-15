@@ -6,10 +6,19 @@
           <img id="logo" src="../assets/images/svg/logo.svg" />
         </router-link>
       </div>
-      <!-- 在選取menu並執行導頁後，menu要隱藏起來 -->
+      <!-- 在選取menu的router並導頁後，menu要隱藏起來 -->
       <div class="nav_bar">
         <ul class="header_bar" :class="menuVisible ? 'menu_open' : ''">
-          <li v-for="(item, index) of menu" id="nav_menu" :key="index" class="menu">
+          <li
+            v-for="(item, index) of menu"
+            id="nav_menu"
+            :key="index"
+            class="menu"
+            @click.prevent="
+              toggleMenu(!menuVisible)
+              item.path !== ''
+            "
+          >
             <router-link :to="item.path">
               <span>
                 <img id="introduction" :src="require(`../assets/images/svg/${item.icon}`)" />
@@ -22,6 +31,7 @@
                 v-for="(subMenu, subMenuIndex) of item.children"
                 :key="subMenuIndex"
                 class="select_menu_item"
+                @click="toggleMenu(!menuVisible)"
               >
                 <router-link :to="subMenu.path" class="link_style">
                   <span>{{ subMenu.title }}</span>
@@ -88,7 +98,7 @@ export default {
           children: []
         },
         {
-          path: '/',
+          path: '',
           icon: 'cat01.svg',
           title: '我要認養',
           children: [
@@ -115,7 +125,7 @@ export default {
           ]
         },
         {
-          path: '/',
+          path: '',
           icon: 'rabbit01.svg',
           title: '住宿相關',
           children: [

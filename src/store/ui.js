@@ -2,7 +2,7 @@
 const ui = {
   namespaced: true,
   state: {
-    menuVisible: true
+    menuVisible: false
   },
   getters: {
     menuVisible(state) {
