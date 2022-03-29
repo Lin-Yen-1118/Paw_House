@@ -7,6 +7,7 @@
         </router-link>
       </div>
       <!-- 在選取menu的router並導頁後，menu要隱藏起來 -->
+      <!-- 在click父層menu的router後，menu如有子選單要展開 -->
       <div class="nav_bar">
         <ul class="header_bar" :class="menuVisible ? 'menu_open' : ''">
           <li
@@ -14,7 +15,7 @@
             id="nav_menu"
             :key="index"
             class="menu"
-            @click.prevent="
+            @click.self="
               toggleMenu(!menuVisible)
               item.path !== ''
             "
@@ -26,13 +27,19 @@
               <span>{{ item.title }}</span>
             </router-link>
             <!-- 下拉選單 -->
-            <ul class="select_menu">
+            <!-- 在選取父層menu的router後，menu如有子選單要展開 -->
+
+            <ul class="select_menu " :class="menuVisible ? 'child_menu_open' : ''">
               <li
                 v-for="(subMenu, subMenuIndex) of item.children"
                 :key="subMenuIndex"
                 class="select_menu_item"
-                @click="toggleMenu(!menuVisible)"
+                @click="
+                  toggleMenu(!menuVisible)
+                  item.children.length !== 0
+                "
               >
+                {{ item.value }}
                 <router-link :to="subMenu.path" class="link_style">
                   <span>{{ subMenu.title }}</span>
                 </router-link>

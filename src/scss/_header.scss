@@ -149,6 +149,12 @@ nav {
   }
 }
 
+//click時開啟下拉子選單
+
+.child_menu_open {
+  display: block;
+}
+
 /* 以下為:我要領養-下拉選單 */
 .menu {
   position: relative;
@@ -166,7 +172,7 @@ nav {
     }
   }
   &:hover {
-    ul.select_menu {
+    .select_menu {
       display: block;
     }
   }
