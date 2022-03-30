@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <div class="container">
+    <div class="cart_container">
       <!-- 頭 -->
       <div class="item_header">
         <!-- 固定的 -->
-        <div class="item_detail">商品名稱</div>
-        <div class="amount">數量</div>
-        <div class="price">價格</div>
-        <div class="total">價格總計{{ total }}</div>
-        <div class="delete">刪除</div>
+
+        <div class="item_header_title item_detail">品項</div>
+        <div class="item_header_title amount">數量</div>
+        <div class="item_header_title price">價格</div>
+        <div class="item_header_title total">總價{{ unitPriceTotal }}</div>
+        <div class="item_header_title delete">刪除</div>
       </div>
       <!-- 購買物的主體 -->
       <div>
@@ -28,7 +29,7 @@ export default {
   data() {
     return {
       // productsList: [],
-      total: 0
+      unitPriceTotal: 0
     }
   },
 
